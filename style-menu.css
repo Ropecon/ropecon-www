@@ -1,0 +1,99 @@
+#header nav .sub-menu {
+	display: none;
+}
+
+/*  Full menu  */
+
+#header.full nav .menu > li.menu-item-has-children {
+	position: relative;
+}
+	#header.full nav .menu > li.menu-item-has-children::after {
+		position: absolute;
+		top: 0;
+		right: 0.1em;
+		content: " ";
+		display: inline-block;
+		width: 10px;
+		height: 65px;
+		background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAECAQAAADoz+32AAAAAnNCSVQICFXsRgQAAAAJcEhZcwAACCcAAAgnARf1jpAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAMElEQVQIHQXBwQmAMAAAsWwhFdsJnKvfgvvDmWg3gEZbo9NNV6cHzU5vpwlo9bXgB8QRFiNnK1XIAAAAAElFTkSuQmCC) 100% 50% no-repeat;
+	}
+
+#header.full nav ul.menu > li > .sub-menu {
+	display: none;
+	position: absolute;
+	min-width: 16em;
+	background-color: #232323;
+}
+		#header.full nav.open-on-click li.menu-item-has-children.open > a,
+		#header.full nav.open-on-hover li.menu-item-has-children:hover > a,
+		#header.full nav.no-js li.menu-item-has-children:hover > a {
+			z-index: 100;
+			position: relative;
+		}
+		#header.full nav.open-on-click li.menu-item-has-children.open ul.sub-menu,
+		#header.full nav.open-on-hover li.menu-item-has-children:hover ul.sub-menu,
+		#header.full nav.no-js li.menu-item-has-children:hover ul.sub-menu {
+			display: block;
+		}
+			#header.full nav li.menu-item-has-children.open.expand-left ul.sub-menu {
+				right: 0;
+			}
+
+#header.full nav .sub-menu li,
+#header.full nav .sub-menu li a {
+	display: block;
+}
+	#header.full nav .sub-menu li a {
+		line-height: 36px;
+	}
+
+/*  Compact menu  */
+
+#header.compact nav ul.menu { display: none; }
+	#header.compact #title_main { margin-right: 0; }
+	#header.compact.open nav ul.menu {
+		display: block;
+		position: absolute;
+		right: 0;
+		left: 0;
+
+		margin-top: 1px;
+		border-top: 1px solid rgba(0,0,0,0.1);
+		background-color: #232323;
+		box-shadow: 0 0.3em 0.3em rgba(0,0,0,0.02);
+		font-size: 90%;
+	}
+		#header.compact.open nav ul li,
+		#header.compact.open nav ul li a {
+			display: block;
+			font-size: 90%;
+			line-height: 1.4em;
+		}
+			#header.compact.open nav ul li a {
+				padding: 0.4em 30px;
+				border-bottom: 1px solid rgba(0,0,0,0.1);
+			}
+
+	#header.compact.open nav ul.sub-menu {
+		display: block;
+		padding: 0;
+		margin: 0 0 0 2em;
+	}
+
+/*  Hide and show a dropdown menu toggle (JS only)  */
+#header .popup-toggle {
+	display: none;
+	height: 65px;
+	width: 24px;
+	padding: 0 30px;
+	margin-right: -15px;
+
+	background: transparent url(images/menu/menu_w.svg) 50% 50% no-repeat;
+	background-size: 24px 24px;
+}
+	#header.compact nav {
+		float: right;
+	}
+		#header.compact nav .popup-toggle {
+			display: block;
+		}

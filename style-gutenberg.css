@@ -1,0 +1,70 @@
+.wp-block .wp-block-cover {
+	height: auto;
+}
+
+/*
+ *  Elements
+ *
+ */
+
+.block-editor-block-list__layout {
+	font-family: Lora, Helvetica, Arial, sans-serif !important;
+	color: rgb(51,51,51);
+}
+	.editor-styles-wrapper h1,
+	.editor-styles-wrapper h2,
+	.editor-styles-wrapper h3,
+	.editor-styles-wrapper h4,
+	.editor-styles-wrapper h5,
+	.editor-styles-wrapper h6 {
+		font-weight: 700 !important;
+		font-family: Montserrat, Helvetica, Arial, sans-serif;
+	}
+
+	.editor-styles-wrapper h1 { font-size: 4em !important; }
+	.editor-styles-wrapper h2 { font-size: 1.5em !important; }
+
+/*
+ *  Core blocks
+ *
+ */
+
+h1.wp-block {
+	max-width: auto;
+}
+
+.editor-styles-wrapper .wp-block-column > .wp-block {
+	height: 100%;
+}
+
+/*
+ *  Block patterns
+ *
+ */
+
+.editor-styles-wrapper .ropecon-block-pattern {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+	.editor-styles-wrapper .ropecon-block-pattern > .wp-block-column:not(:first-child) {
+		margin: 0;
+	}
+		.editor-styles-wrapper .ropecon-two-columns .block-editor-block-list__block.wp-block-cover {
+			margin: 0;
+		}
+
+.wp-block:nth-child(even) .ropecon-two-columns .is-text-column {
+	order: 2;
+}
+
+.editor-styles-wrapper .ropecon-text-overlaying-image .wp-block-columns {
+	max-width: 80%;
+}
+
+/*
+ *  Color palette
+ *
+ */
+
+.has-white-color * { color: #fff !important; }
+

@@ -1,0 +1,143 @@
+/*
+ *  CSS Reset v2.0
+ *  Eric Meyer, 2011-01-26
+ *  http://meyerweb.com/eric/tools/css/reset/
+ *
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	/* Prefer a fixed table layout. -- Pasi Lallinaho 2016-08-30 */
+	table-layout: fixed;
+}
+
+
+/*
+ *  Self-clearing float
+ *  Tony Aslett, 2004-05-08
+ *  http://csscreator.com/attributes/containedfloat.php
+ *
+ */
+
+.group:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	font-size: 0;
+
+	/*  A high order number ensures this ::after element does not appear as an
+	 *  empty box in the middle of ordered (grid) items
+	 *  Pasi Lallinaho, 2018-10-19
+	 */
+	order: 999999;
+}
+
+/*
+ *  Border box model everywhere
+ *  Pasi Lallinaho, 2016-04-09
+ *
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+/*
+ *  Within a container, remove top margin from the first item and bottom margin from the last item
+ *  Pasi Lallinaho, 2016-08-25
+ *
+ */
+
+.container > :first-child {
+	margin-top: 0 !important;
+}
+
+.container > :last-child {
+	margin-bottom: 0 !important;
+}
+
+/*
+ *  Generic element styles
+ *  Pasi Lallinaho, 2016-08-25
+ *
+ */
+
+a {
+	outline: none;
+}
+	a, a:link, a:visited {
+		text-decoration: none;
+	}
+
+strong, b {
+	font-weight: bold;
+}
+
+em, i {
+	font-style: italic;
+}
+
+hr {
+	margin: 1em 0;
+	border: none;
+	border-top: 1px solid rgba( 0, 0, 0, 0.8 );
+}
+
+p, blockquote, pre, address, dl, ol, ul, form, table {
+	margin-bottom: 1em;
+	line-height: 1.4em;
+}
+
+/*
+ *  Dark selection style
+ *  Pasi Lallinaho
+ *
+ */
+
+::selection { background-color: #111; color: #fff; }
+::-moz-selection { background-color: #111; color: #fff; }
+::-webkit-selection { background-color: #111; color: #fff; }

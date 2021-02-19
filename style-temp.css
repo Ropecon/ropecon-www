@@ -1,0 +1,15 @@
+.page-id-105 #header {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.page-id-113 #header {
+	transition: 200ms all;
+	border-bottom: none;
+}
+	.page-id-113 #header:hover,
+	.page-id-113 #header:active,
+	.page-id-113 #header:focus {
+		border-bottom: 1px solid rgba(255,255,255,0.15);
+		background-color: rgba(0,0,0,0.5);
+	}
+
