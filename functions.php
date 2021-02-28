@@ -20,6 +20,9 @@ function ropecon_after_setup_theme( ) {
 	/*  Excerpts for pages  */
 	add_post_type_support( 'page', 'excerpt' );
 
+	/*  Hide core block patterns  */
+	remove_theme_support( 'core-block-patterns' ); 
+
 	/*  Sidebars  */
 	register_sidebar( array(
 		'name' => __( 'Footer Widgets', 'ropecon' ),
@@ -133,22 +136,26 @@ function ropecon_init_block_patterns( ) {
 		array( 'label' => 'Ropecon' )
 	);
 
+	$imgroot = get_template_directory_uri( ) . '/images/block-pattern-preview';
+
 	register_block_pattern(
 		'ropecon/title-cover',
 		array(
 			'title' => __( 'Title cover', 'ropecon' ),
-			'content' => '<!-- wp:cover {"dimRatio":0,"align":"full","className":"ropecon-block-pattern ropecon-title-cover"} --><div class="wp-block-cover alignfull ropecon-block-pattern ropecon-title-cover"><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"placeholder":"Otsikko"} --><h1 class="has-text-align-center"></h1><!-- /wp:heading --></div></div><!-- /wp:cover -->',
+			'content' => '<!-- wp:cover {"dimRatio":0,"align":"full","className":"ropecon-block-pattern ropecon-title-cover","id":0,"url":"' . $imgroot . '/title-cover.svg"} --><div class="wp-block-cover alignfull ropecon-block-pattern ropecon-title-cover" style="background-image:url(' . $imgroot . '/title-cover.svg)"><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"placeholder":"Otsikko"} --><h1 class="has-text-align-center"></h1><!-- /wp:heading --></div></div><!-- /wp:cover -->',
 			'description' => __( 'Centered title on top of image.', 'ropecon' ),
-			'categories' => array( 'ropecon' )
+			'categories' => array( 'ropecon' ),
+			'viewportWidth' => 1200
 		)
 	);
 	register_block_pattern(
 		'ropecon/two-columns',
 		array(
 			'title' => __( 'Two columns', 'ropecon' ),
-			'content' => '<!-- wp:columns {"align":"full","className":"ropecon-block-pattern ropecon-two-columns"} --><div class="wp-block-columns alignfull ropecon-block-pattern ropecon-two-columns"><!-- wp:column {"className":"is-text-column"} --><div class="wp-block-column is-text-column"><!-- wp:group {"align":"wide","backgroundColor":"white"} --><div class="wp-block-group alignwide has-white-background-color has-background"><div class="wp-block-group__inner-container"><!-- wp:heading --><h2>Otsikko</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Leipäteksti...</p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --><!-- wp:column {"className":"is-cover-column"} --><div class="wp-block-column is-cover-column"><!-- wp:cover {"dimRatio":0} --><div class="wp-block-cover"><div class="wp-block-cover__inner-container"></div></div><!-- /wp:cover --></div><!-- /wp:column --></div><!-- /wp:columns -->',
+			'content' => '<!-- wp:columns {"align":"full","className":"ropecon-block-pattern ropecon-two-columns"} --><div class="wp-block-columns alignfull ropecon-block-pattern ropecon-two-columns"><!-- wp:column {"className":"is-text-column"} --><div class="wp-block-column is-text-column"><!-- wp:group {"align":"wide","backgroundColor":"white"} --><div class="wp-block-group alignwide has-white-background-color has-background"><div class="wp-block-group__inner-container"><!-- wp:heading --><h2>Otsikko</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Leipäteksti...</p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --><!-- wp:column {"className":"is-cover-column"} --><div class="wp-block-column is-cover-column"><!-- wp:cover {"dimRatio":0,"id":0,"url":"' . $imgroot . '/two-columns.svg"} --><div class="wp-block-cover" style="background-image:url(' . $imgroot . '/two-columns.svg)"><div class="wp-block-cover__inner-container"></div></div><!-- /wp:cover --></div><!-- /wp:column --></div><!-- /wp:columns -->',
 			'description' => __( 'Text and image in two columns.', 'ropecon' ),
-			'categories' => array( 'ropecon' )
+			'categories' => array( 'ropecon' ),
+			'viewportWidth' => 1200
 		)
 	);
 	register_block_pattern(
@@ -157,16 +164,18 @@ function ropecon_init_block_patterns( ) {
 			'title' => __( 'Three boxes', 'ropecon' ),
 			'content' => '<!-- wp:columns {"align":"full","className":"ropecon-block-pattern ropecon-three-boxes"} --><div class="wp-block-columns alignfull ropecon-block-pattern ropecon-three-boxes"><!-- wp:column --><div class="wp-block-column"><!-- wp:group {"backgroundColor":"white"} --><div class="wp-block-group has-white-background-color has-background"><div class="wp-block-group__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Leipäteksti..."} --><p class="has-text-align-center"></p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:group {"backgroundColor":"light-gray"} --><div class="wp-block-group has-light-gray-background-color has-background"><div class="wp-block-group__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Leipäteksti..."} --><p class="has-text-align-center"></p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:group {"backgroundColor":"black","textColor":"white"} --><div class="wp-block-group has-white-color has-black-background-color has-text-color has-background"><div class="wp-block-group__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Leipäteksti..."} --><p class="has-text-align-center"></p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --></div><!-- /wp:columns -->',
 			'description' => __( 'Three columns with different background colors.', 'ropecon' ),
-			'categories' => array( 'ropecon' )
+			'categories' => array( 'ropecon' ),
+			'viewportWidth' => 450
 		)
 	);
 	register_block_pattern(
 		'ropecon/text-overlaying-image',
 		array(
 			'title' => __( 'Text overlaying image', 'ropecon' ),
-			'content' => '<!-- wp:cover {"dimRatio":0,"align":"full","className":"ropecon-block-pattern ropecon-text-overlaying-image"} --><div class="wp-block-cover alignfull ropecon-block-pattern ropecon-text-overlaying-image"><div class="wp-block-cover__inner-container"><!-- wp:columns --><div class="wp-block-columns"><!-- wp:column --><div class="wp-block-column"><!-- wp:group {"textColor":"white"} --><div class="wp-block-group has-white-color has-text-color"><div class="wp-block-group__inner-container"><!-- wp:paragraph {"placeholder":"Leipäteksti.."} --><p></p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:group {"textColor":"white"} --><div class="wp-block-group has-white-color has-text-color"><div class="wp-block-group__inner-container"><!-- wp:paragraph {"placeholder":"Leipäteksti..."} --><p></p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --></div><!-- /wp:columns --></div></div><!-- /wp:cover -->',
+			'content' => '<!-- wp:cover {"dimRatio":0,"align":"full","className":"ropecon-block-pattern ropecon-text-overlaying-image","id":0,"url":"' . $imgroot . '/text-overlaying-image.svg"} --><div class="wp-block-cover alignfull ropecon-block-pattern ropecon-text-overlaying-image" style="background-image:url(' . $imgroot . '/text-overlaying-image.svg)"><div class="wp-block-cover__inner-container"><!-- wp:columns --><div class="wp-block-columns"><!-- wp:column --><div class="wp-block-column"><!-- wp:group {"textColor":"white"} --><div class="wp-block-group has-white-color has-text-color"><div class="wp-block-group__inner-container"><!-- wp:paragraph {"placeholder":"Leipäteksti.."} --><p></p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --><!-- wp:column --><div class="wp-block-column"><!-- wp:group {"textColor":"white"} --><div class="wp-block-group has-white-color has-text-color"><div class="wp-block-group__inner-container"><!-- wp:paragraph {"placeholder":"Leipäteksti..."} --><p></p><!-- /wp:paragraph --></div></div><!-- /wp:group --></div><!-- /wp:column --></div><!-- /wp:columns --></div></div><!-- /wp:cover -->',
 			'description' => __( 'Text on top of image (left or right).', 'ropecon' ),
-			'categories' => array( 'ropecon' )
+			'categories' => array( 'ropecon' ),
+			'viewportWidth' => 1200
 		)
 	);
 }
