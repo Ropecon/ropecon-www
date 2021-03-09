@@ -68,3 +68,17 @@ h1.wp-block {
 
 .has-white-color * { color: #fff !important; }
 
+/*
+ *
+ *
+ */
+
+.wp-block-themeisle-blocks-icon-picker-popover button {
+	text-align: left;
+}
+.wp-block-themeisle-blocks-icon-picker-popover i {
+	font-size: 24px !important;
+}
+.wp-block-themeisle-blocks-icon-picker-popover i::before {
+	text-align: center;
+}
