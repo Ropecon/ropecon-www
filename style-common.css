@@ -147,6 +147,10 @@ img {
 						padding: 30px;
 					}
 
+			.ropecon-two-columns .wp-block-column.is-cover-column .wp-block-cover {
+				height: 100%;
+			}
+
 			/*  THREE BOXES  */
 			.ropecon-three-boxes .wp-block-column {
 				flex-basis: 100% !important;
