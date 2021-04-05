@@ -126,7 +126,11 @@ function ropecon_block_editor_assets( ) {
 //	wp_enqueue_style( get_template( ) . '-common', get_template_directory_uri( ) . '/style-common.css' );
 	wp_enqueue_style( get_template( ) . '-gutenberg', get_template_directory_uri( ) . '/style-gutenberg.css' );
 	wp_enqueue_style( get_template( ) . '-google-fonts' );
+
+	wp_enqueue_script( get_template( ) . '-gutenberg', get_template_directory_uri( ) . '/script-gutenberg.js', array( 'wp-blocks', 'wp-dom' ), '', true );
 }
+
+/*  Block patterns  */
 
 add_action( 'init', 'ropecon_init_block_patterns' );
 
