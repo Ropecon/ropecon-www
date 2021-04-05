@@ -13,3 +13,57 @@
 		background-color: rgba(0,0,0,0.5);
 	}
 
+
+/*
+ *  To be obsolete
+ *
+ */
+
+.ropecon-two-columns {
+	align-items: stretch;
+}
+
+	.ropecon-two-columns .wp-block-column {
+		margin: 0 !important;
+	}
+
+		.ropecon-two-columns .wp-block-column {
+			flex-basis: 100% !important;
+		}
+			.ropecon-two-columns .wp-block-group {
+				padding: 1px;
+			}
+				.ropecon-two-columns .wp-block-group__inner-container {
+					width: 100%;
+					margin: 0;
+					padding: 30px;
+				}
+
+		.ropecon-two-columns .wp-block-column.is-cover-column .wp-block-cover {
+			height: 100%;
+		}
+
+@media screen and (min-width: 769px) {
+	.ropecon-two-columns .wp-block-column {
+		flex-basis: 50% !important;
+	}
+		.ropecon-two-columns .wp-block-group__inner-container {
+			padding: 4em;
+		}
+
+	/*  Make the text column the rightmost column on every other occasion  */
+	.ropecon-two-columns:nth-child(even) .is-text-column { order: 2; }
+}
+
+@media screen and (min-width: 1280px) {
+	.ropecon-two-columns .wp-block-group__inner-container {
+		margin-top: 6em;
+		margin-bottom: 6em;
+		padding: 0;
+	}
+
+	.ropecon-two-columns .wp-block-group__inner-container {
+		width: 50%;
+		margin-left: 25%;
+	}
+}

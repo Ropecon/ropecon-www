@@ -16,13 +16,19 @@
 	.editor-styles-wrapper h3,
 	.editor-styles-wrapper h4,
 	.editor-styles-wrapper h5,
-	.editor-styles-wrapper h6 {
+	.editor-styles-wrapper h6,
+	.editor-styles-wrapper .has-large-font-size {
 		font-weight: 700 !important;
 		font-family: Montserrat, Helvetica, Arial, sans-serif;
 	}
 
 	.editor-styles-wrapper h1 { font-size: 4em !important; }
 	.editor-styles-wrapper h2 { font-size: 1.5em !important; }
+
+.editor-styles-wrapper .wp-block > .block-editor-block-list__block {
+	margin-top: 0;
+	margin-bottom: 0;
+}
 
 /*
  *  Core blocks
@@ -37,6 +43,34 @@ h1.wp-block {
 	height: 100%;
 }
 
+.editor-styles-wrapper .wp-block-media-text figure {
+	position: relative !important;
+	height: 100% !important;
+	width: 100% !important;
+	overflow: hidden;
+}
+	.editor-styles-wrapper .wp-block-media-text figure img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		max-width: none;
+		max-height: none;
+		-o-object-fit: cover;
+		object-fit: cover;
+	}
+
+	.editor-styles-wrapper .wp-block-media-text .wp-block-media-text__content {
+		padding: 4em;
+	}
+		.editor-styles-wrapper .wp-block-media-text .wp-block-media-text__content > :first-child { margin-top: 0; }
+		.editor-styles-wrapper .wp-block-media-text .wp-block-media-text__content > :last-child { margin-bottom: 0; }
+
 /*
  *  Block patterns
  *
@@ -49,13 +83,6 @@ h1.wp-block {
 	.editor-styles-wrapper .ropecon-block-pattern > .wp-block-column:not(:first-child) {
 		margin: 0;
 	}
-		.editor-styles-wrapper .ropecon-two-columns .block-editor-block-list__block.wp-block-cover {
-			margin: 0;
-		}
-
-.wp-block:nth-child(even) .ropecon-two-columns .is-text-column {
-	order: 2;
-}
 
 .editor-styles-wrapper .ropecon-text-overlaying-image .wp-block-columns {
 	max-width: 80%;
@@ -82,3 +109,20 @@ h1.wp-block {
 .wp-block-themeisle-blocks-icon-picker-popover i::before {
 	text-align: center;
 }
+
+
+
+
+
+/*
+ *  To be obsolete
+ *
+ */
+
+.wp-block:nth-child(even) .ropecon-two-columns .is-text-column {
+	order: 2;
+}
+	.editor-styles-wrapper .ropecon-two-columns .block-editor-block-list__block.wp-block-cover {
+		margin: 0;
+	}
+
