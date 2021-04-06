@@ -71,6 +71,15 @@ h1.wp-block {
 		.editor-styles-wrapper .wp-block-media-text .wp-block-media-text__content > :first-child { margin-top: 0; }
 		.editor-styles-wrapper .wp-block-media-text .wp-block-media-text__content > :last-child { margin-bottom: 0; }
 
+	.editor-styles-wrapper .wp-block-media-text.is-style-text-overlaying-image figure {
+		grid-column: 1 !important;
+		width: 200% !important;
+		max-width: 200% !important;
+	}
+	.editor-styles-wrapper .wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__content {
+		color: #fff;
+	}
+
 /*
  *  Block patterns
  *
@@ -83,10 +92,6 @@ h1.wp-block {
 	.editor-styles-wrapper .ropecon-block-pattern > .wp-block-column:not(:first-child) {
 		margin: 0;
 	}
-
-.editor-styles-wrapper .ropecon-text-overlaying-image .wp-block-columns {
-	max-width: 80%;
-}
 
 /*
  *  Color palette
@@ -109,20 +114,4 @@ h1.wp-block {
 .wp-block-themeisle-blocks-icon-picker-popover i::before {
 	text-align: center;
 }
-
-
-
-
-
-/*
- *  To be obsolete
- *
- */
-
-.wp-block:nth-child(even) .ropecon-two-columns .is-text-column {
-	order: 2;
-}
-	.editor-styles-wrapper .ropecon-two-columns .block-editor-block-list__block.wp-block-cover {
-		margin: 0;
-	}
 

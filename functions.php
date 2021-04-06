@@ -125,9 +125,10 @@ add_action( 'enqueue_block_editor_assets', 'ropecon_block_editor_assets', 10000 
 function ropecon_block_editor_assets( ) {
 //	wp_enqueue_style( get_template( ) . '-common', get_template_directory_uri( ) . '/style-common.css' );
 	wp_enqueue_style( get_template( ) . '-gutenberg', get_template_directory_uri( ) . '/style-gutenberg.css' );
+	wp_enqueue_style( get_template( ) . '-gutenberg-temp', get_template_directory_uri( ) . '/style-gutenberg-temp.css' );
 	wp_enqueue_style( get_template( ) . '-google-fonts' );
 
-	wp_enqueue_script( get_template( ) . '-gutenberg', get_template_directory_uri( ) . '/script-gutenberg.js', array( 'wp-blocks', 'wp-dom' ), '', true );
+	wp_enqueue_script( get_template( ) . '-gutenberg', get_template_directory_uri( ) . '/script-gutenberg.js', array( 'wp-blocks', 'wp-dom', 'wp-i18n' ), time( ), true );
 }
 
 /*  Block patterns  */
@@ -149,10 +150,10 @@ function ropecon_init_block_patterns( ) {
 			'title' => __( 'Two columns', 'ropecon' ),
 			'description' => __( 'Text and image in two columns.', 'ropecon' )
 		), */
-		'text-overlaying-image' => array(
+/*		'text-overlaying-image' => array(
 			'title' => __( 'Text overlaying image', 'ropecon' ),
 			'description' => __( 'Text on top of image (left or right).', 'ropecon' ),
-		),
+		), */
 		'three-icon-boxes' => array(
 			'title' => __( 'Three icon boxes', 'ropecon' ),
 			'description' => __( 'Three columns with icons and varying background colors.', 'ropecon' )
