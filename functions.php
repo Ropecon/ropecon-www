@@ -101,12 +101,12 @@ function ropecon_styles_scripts( ) {
 	// Fonts from Google Fonts
 	wp_enqueue_style( get_template( ) . '-google-fonts' );
 
-	// Javascript
-	wp_enqueue_script( get_template( ), get_template_directory_uri( ) . '/script.js', array( 'jquery' ) );
-
 	// jQuery plugins
-	wp_register_script( 'jquery-browser-mobile', get_template_directory_uri( ) . '/lib/jquery-browser-mobile.js', array( 'jquery' ), '2014-08-01' );
+	wp_register_script( 'jquery-browser-mobile', get_template_directory_uri( ) . '/lib/jquery.browser.mobile.js', array( 'jquery' ), '2014-08-01' );
 	wp_register_script( 'jquery-waitforimages', get_template_directory_uri( ) . '/lib/jquery.waitforimages.min.js', array( 'jquery' ), '2.4.0' );
+
+	// Javascript
+	wp_enqueue_script( get_template( ), get_template_directory_uri( ) . '/script.js', array( 'jquery', 'jquery-browser-mobile' ) );
 
 	// Dynamic menu
 	wp_enqueue_script( get_template( ) . '-menu', get_template_directory_uri( ) . '/script-menu.js', array( 'jquery', 'jquery-waitforimages', 'wp-i18n' ) );
