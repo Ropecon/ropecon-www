@@ -19,6 +19,22 @@ wp.hooks.addFilter( 'blocks.registerBlockType',
 
 // Register custom block styles
 wp.domReady( function( ) {
+	// Columns
+	wp.blocks.registerBlockStyle(
+		'core/columns',
+		[
+			{
+				name: 'default',
+				label: __( 'Default', 'ropecon' ),
+				isDefault: true
+			},
+			{
+				name: 'content-in-boxes',
+				label: __( 'Content in boxes', 'ropecon' ),
+			}
+		]
+	);
+
 	// Cover
 	wp.blocks.registerBlockStyle(
 		'core/cover',
@@ -50,4 +66,21 @@ wp.domReady( function( ) {
 			}
 		]
 	);
+
+	// Paragraph
+	wp.blocks.registerBlockStyle(
+		'core/paragraph',
+		[
+			{
+				name: 'default',
+				label: __( 'Default', 'ropecon' ),
+				isDefault: true
+			},
+			{
+				name: 'currency',
+				label: __( 'Currency', 'ropecon' ),
+			}
+		]
+	);
+
 } );
