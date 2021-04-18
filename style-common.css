@@ -136,7 +136,12 @@ img {
 	.wp-block-media-text .wp-block-media-text__content {
 		margin: 0;
 		padding: var(--gutter-sm);
+		grid-row: 1;
 	}
+	.wp-block-media-text .wp-block-media-text__media {
+		grid-row: 2;
+	}
+
 		.wp-block-media-text .wp-block-media-text__content > :first-child { margin-top: 0; }
 		.wp-block-media-text .wp-block-media-text__content > :last-child { margin-bottom: 0; }
 
@@ -144,6 +149,7 @@ img {
 	.wp-block-media-text {
 		grid-template-columns: 100% !important;
 	}
+		.wp-block-media-text .wp-block-media-text__media,
 		.wp-block-media-text .wp-block-media-text__content {
 			grid-column: auto;
 			grid-row: auto;
@@ -154,13 +160,13 @@ img {
 	.wp-block-media-text {
 		grid-template-columns: repeat(2, 1fr) !important;
 	}
-		.wp-block-media-text figure {
+		.wp-block-media-text .wp-block-media-text__media {
 			position: relative;
 			height: 100%;
 			width: 100%;
 			overflow: hidden;
 		}
-			.wp-block-media-text figure img {
+			.wp-block-media-text .wp-block-media-text__media img {
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -193,14 +199,14 @@ img {
 		display: block;
 		position: relative;
 	}
-		.wp-block-media-text.is-style-text-overlaying-image figure,
+		.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__media,
 		.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__content {
 			position: absolute;
 			top: 0;
 			left: 0;
 		}
 
-		.wp-block-media-text.is-style-text-overlaying-image figure {
+		.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__media {
 			grid-column: 1 !important;
 			width: 200%;
 		}
@@ -214,7 +220,7 @@ img {
 	.wp-block-media-text.is-style-text-overlaying-image {
 		display: grid;
 	}
-		.wp-block-media-text.is-style-text-overlaying-image figure,
+		.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__media,
 		.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__content {
 			position: relative;
 		}
@@ -265,12 +271,12 @@ img {
 
 /*  Highlight colors  */
 
-.has-ropecon-highlight-one-background-color { background-color: #5472d2; }
-.has-ropecon-highlight-one-color { color: #5472d2; }
+.has-ropecon-highlight-one-background-color { background-color: var(--ropecon-highlight-one); }
+.has-ropecon-highlight-one-color { color: var(--ropecon-highlight-one); }
 
 .ropecon-block-pattern.wp-block-cover[data-ll-status="loading"],
 .ropecon-block-pattern .wp-block-cover[data-ll-status="loading"] {
-	background-color: #5472d2;
+	background-color: var(--ropecon-highlight-one);
 	animation: 600ms linear 0s infinite alternate running loading-cover-image;
 }
 
