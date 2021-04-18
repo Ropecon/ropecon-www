@@ -19,6 +19,15 @@
  *
  */
 
+/*  Block patterns  */
+
+.ropecon-block-pattern {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
 /*  Block pattern: two columns  */
 
 .ropecon-two-columns {
@@ -109,4 +118,23 @@
 		padding: 0;
 	}
 }
+
+/*  Block pattern: Three columns  */
+
+.ropecon-three-boxes {
+	align-items: stretch;
+}
+
+	.ropecon-three-boxes .wp-block-column {
+		flex-basis: 100% !important;
+		margin: 0 !important;
+	}
+
+@media screen and (min-width: 769px) {
+	.ropecon-three-boxes .wp-block-column {
+		flex-grow: 1;
+		flex-basis: 0 !important;
+	}
+}
+
 
