@@ -116,6 +116,18 @@ h1.wp-block {
 		color: #fff;
 	}
 
+/*  Paragraph  */
+
+	/*  Block style: Currency  */
+	.editor-styles-wrapper p.is-style-currency::before {
+		content: "€";
+		font-size: 50%;
+		line-height: 250%;
+		margin-right: 0.3em;
+
+		vertical-align: top;
+	}
+
 /*
  *  Color palette
  *

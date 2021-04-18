@@ -82,5 +82,4 @@ wp.domReady( function( ) {
 			}
 		]
 	);
-
 } );
