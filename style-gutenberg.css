@@ -92,19 +92,6 @@ h1.wp-block {
 	}
 
 /*
- *  Block patterns
- *
- */
-
-.editor-styles-wrapper .ropecon-block-pattern {
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-}
-	.editor-styles-wrapper .ropecon-block-pattern > .wp-block-column:not(:first-child) {
-		margin: 0;
-	}
-
-/*
  *  Color palette
  *
  */
