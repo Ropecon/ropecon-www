@@ -8,6 +8,9 @@ wp.hooks.addFilter( 'blocks.registerBlockType',
 		if( name == 'core/cover' ) {
 			// No background dimming
 			settings.attributes.dimRatio = { type: 'number', default: 0 };
+		}
+		// Common
+		if( name == 'core/cover' || name == 'core/media-text' ) {
 			// Full alignment by default
 			// NOTE: This throws a warning for existing blocks with no alignment attribute
 			settings.attributes.align = { type: 'string', default: 'full' };

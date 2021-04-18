@@ -181,9 +181,9 @@ function ropecon_init_block_patterns( ) {
 
 /* */
 
-add_filter( 'render_block', 'abcd', 10, 2 );
+add_filter( 'render_block', 'ropecon_render_block_paragraph_currency', 10, 2 );
 
-function abcd( $content, $block ) {
+function ropecon_render_block_paragraph_currency( $content, $block ) {
 	if( $block['blockName'] != 'core/paragraph' ) {
 		return $content;
 	}
@@ -191,8 +191,6 @@ function abcd( $content, $block ) {
 	if( !isset( $block['attrs']['className'] ) || !in_array( 'is-style-currency', explode( ' ', $block['attrs']['className'] ) ) ) {
 		return $content;
 	}
-
-	echo '<script>console.log( `' . $content . '`);</script>';
 
 	$content = substr_replace( $content, '><span class="currency">&euro;</span>', strpos( $content, '>' ), 1 );
 	return $content;

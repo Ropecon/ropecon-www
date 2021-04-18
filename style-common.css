@@ -124,8 +124,8 @@ img {
 	/*  Block style: Content in boxes  */
 
 	.wp-block-columns.is-style-content-in-boxes {
-		padding-top: 2em;
-		padding-bottom: 2em;
+		margin-top: 2em !important;
+		margin-bottom: 2em !important;
 	}
 		.wp-block-columns.is-style-content-in-boxes .wp-block-column {
 			background-color: #fff;
@@ -307,6 +307,28 @@ img {
 
 		vertical-align: top;
 	}
+
+/*  Table  */
+
+.wp-block-table {
+	margin-top: 2em !important;
+	margin-bottom: 2em !important;
+}
+	table {
+		width: 100%;
+		table-layout: fixed;
+		background-color: #fff;
+	}
+		td, th {
+			padding: 0.5em 0.9em;
+			border: 1px solid rgba(0,0,0,0.2) !important;
+		}
+			thead td, th {
+				text-align: left;
+				font-family: Montserrat, Helvetica, Arial, sans-serif;
+				font-weight: 600;
+			}
+
 
 /*
  *  Common classes

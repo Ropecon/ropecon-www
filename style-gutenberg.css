@@ -128,6 +128,23 @@ h1.wp-block {
 		vertical-align: top;
 	}
 
+/*  Table  */
+
+.editor-styles-wrapper td,
+.editor-styles-wrapper th {
+	border: 1px solid rgba(0,0,0,0.2) !important;
+}
+	.editor-styles-wrapper th,
+	.editor-styles-wrapper thead td {
+		text-align: left;
+		font-family: Montserrat, Helvetica, Arial, sans-serif;
+		font-weight: 600;
+	}
+	.editor-styles-wrapper table thead {
+		border-bottom: none;
+	}
+
+
 /*
  *  Color palette
  *
