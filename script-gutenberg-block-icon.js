@@ -40,6 +40,10 @@ wp.blocks.registerBlockType(
 		category: 'design',
 		attributes: {
 			icon: { type: 'string', default: 'Ropecon' },
+			align: { type: 'string', default: 'center' }
+		},
+		supports: {
+			align: [ 'left', 'center', 'right' ]
 		},
 		edit: function( props ) {
 			return( [
@@ -59,7 +63,9 @@ wp.blocks.registerBlockType(
 			] );
 		},
 		save: function( props ) {
-			return el( 'p', { class: 'icon-' + props.attributes.icon }, '' );
+			align_class = ( props.attributes.align != null ) ? ' has-text-align-' + props.attributes.align : '';
+
+			return el( 'p', { class: 'icon-' + props.attributes.icon + align_class }, '' );
 		}
 	}
 );
