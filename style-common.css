@@ -374,3 +374,27 @@ img {
 	100% { opacity: 1; }
 }
 
+/*
+ *  Icons
+ *
+ */
+
+p[class^="icon-"], p[class*=" icon-"] {
+	display: block;
+	font-size: 48px;
+	margin-bottom: 12px;
+}
+
+p.icon-Ropefcon {
+	height: 48px;
+}
+	p.icon-Ropecon:before {
+		content: " ";
+		display: block;
+		height: 48px;
+		width: 48px;
+		background-image: url(images/ropecon_icon.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+

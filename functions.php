@@ -93,6 +93,8 @@ function ropecon_styles_scripts( ) {
 	wp_enqueue_style( get_template( ), get_template_directory_uri( ) . '/style.css', array( 'css-reset' ) );
 	wp_enqueue_style( get_template( ) . '-layout', get_template_directory_uri( ) . '/style-layout.css', array( get_template( ) ) );
 	wp_enqueue_style( get_template( ) . '-common', get_template_directory_uri( ) . '/style-common.css', array( get_template( ) ) );
+	wp_enqueue_style( get_template( ) . '-fonts', get_template_directory_uri( ) . '/style-fonts.css', array( get_template( ) ) );
+
 	wp_enqueue_style( get_template( ) . '-temp', get_template_directory_uri( ) . '/style-temp.css', array( get_template( ) ) );
 
 	// Responsive design
@@ -126,10 +128,27 @@ add_action( 'enqueue_block_editor_assets', 'ropecon_block_editor_assets', 10000 
 function ropecon_block_editor_assets( ) {
 //	wp_enqueue_style( get_template( ) . '-common', get_template_directory_uri( ) . '/style-common.css' );
 	wp_enqueue_style( get_template( ) . '-gutenberg', get_template_directory_uri( ) . '/style-gutenberg.css' );
+	wp_enqueue_style( get_template( ) . '-fonts', get_template_directory_uri( ) . '/style-fonts.css' );
+
 	wp_enqueue_style( get_template( ) . '-gutenberg-temp', get_template_directory_uri( ) . '/style-gutenberg-temp.css' );
 	wp_enqueue_style( get_template( ) . '-google-fonts' );
 
 	wp_enqueue_script( get_template( ) . '-gutenberg', get_template_directory_uri( ) . '/script-gutenberg.js', array( 'wp-blocks', 'wp-dom', 'wp-i18n' ), time( ), true );
+	wp_enqueue_script( get_template( ) . '-gutenberg-block-icon', get_template_directory_uri( ) . '/script-gutenberg-block-icon.js', array( 'wp-blocks', 'wp-dom', 'wp-i18n' ), time( ), true );
+}
+
+add_action( 'init', 'ropecon_init_gutenberg' );
+
+function ropecon_init_gutenberg( ) {
+	register_block_type(
+		'ropecon/icon',
+		array(
+			'editor_script' => get_template( ) . '-gutenberg-block-icon',
+			'attributes' => array(
+				'icon' => array( 'type' => 'string', 'default' => '' )
+			)
+		)
+	);
 }
 
 /*  Block patterns  */

@@ -167,3 +167,31 @@ h1.wp-block {
 	text-align: center;
 }
 
+/*
+ *  Icons
+ *
+ */
+
+.editor-styles-wrapper [data-type="ropecon/icon"],
+.editor-styles-wrapper [data-type="ropecon/icon"] p {
+	line-height: 1;
+}
+
+.editor-styles-wrapper p[class^="icon-"],
+.editor-styles-wrapper p[class*=" icon-"] {
+	display: block;
+	font-size: 48px;
+	margin-bottom: 12px;
+}
+
+.editor-styles-wrapper p.icon-Ropecon:before {
+	content: " ";
+	display: block;
+	height: 48px;
+	width: 48px;
+	background-image: url(images/ropecon_icon.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
