@@ -17,6 +17,10 @@ function ropecon_after_setup_theme( ) {
 	/*  Wide/full aligned Gutenberg blocks  */
 	add_theme_support( 'align-wide' );
 
+	/*  Featured images  */
+	add_theme_support( 'post-thumbnails' );
+
+
 	/*  Excerpts for pages  */
 	add_post_type_support( 'page', 'excerpt' );
 
@@ -151,54 +155,7 @@ function ropecon_init_gutenberg( ) {
 	);
 }
 
-/*  Block patterns  */
-
-add_action( 'init', 'ropecon_init_block_patterns' );
-
-function ropecon_init_block_patterns( ) {
-	register_block_pattern_category(
-		'ropecon',
-		array( 'label' => 'Ropecon' )
-	);
-
-	$patterns = array(
-		'title-cover' => array(
-			'title' => __( 'Title cover', 'ropecon' ),
-			'description' => __( 'Centered title on top of image.', 'ropecon' )
-		),
-/*		'two-columns' => array(
-			'title' => __( 'Two columns', 'ropecon' ),
-			'description' => __( 'Text and image in two columns.', 'ropecon' )
-		), */
-/*		'text-overlaying-image' => array(
-			'title' => __( 'Text overlaying image', 'ropecon' ),
-			'description' => __( 'Text on top of image (left or right).', 'ropecon' ),
-		), */
-		'three-icon-boxes' => array(
-			'title' => __( 'Three icon boxes', 'ropecon' ),
-			'description' => __( 'Three columns with icons and varying background colors.', 'ropecon' )
-		),
-	);
-
-	foreach( $patterns as $slug => $labels ) {
-		$content_raw = file_get_contents( get_template_directory_uri( ) . '/block-patterns/' . $slug . '.gb.html' ); 
-		$content = str_replace( 'IMG_ROOT', get_template_directory_uri( ) . '/images/block-pattern-preview', $content_raw );
-//		$content = '<!-- wp:group {"align":"full","className":"ropecon-block-pattern ropecon-' . $slug . '"} --><div class="wp-block-group alignfull ropecon-block-pattern ropecon-' . $slug . '">' . $content . '</div><!-- /wp:group -->';
-		register_block_pattern(
-			'ropecon/' . $slug,
-			array(
-				'title' => $labels['title'],
-				'content' => $content,
-				'description' => $labels['description'],
-				'categories' => array( 'ropecon' ),
-				'viewportWidth' => 1200
-			)
-		);
-	}
-
-}
-
-/* */
+/*  Modify output for currency block  */
 
 add_filter( 'render_block', 'ropecon_render_block_paragraph_currency', 10, 2 );
 
@@ -215,5 +172,67 @@ function ropecon_render_block_paragraph_currency( $content, $block ) {
 	return $content;
 }
 
+
+/*  Block patterns  */
+
+add_action( 'init', 'ropecon_init_block_patterns' );
+
+function ropecon_init_block_patterns( ) {
+	register_block_pattern_category(
+		'ropecon',
+		array( 'label' => 'Ropecon' )
+	);
+
+	$patterns = array(
+		'title-cover' => array(
+			'title' => __( 'Title cover', 'ropecon' ),
+			'description' => __( 'Centered title on top of image.', 'ropecon' )
+		),
+		'three-icon-boxes' => array(
+			'title' => __( 'Three icon boxes', 'ropecon' ),
+			'description' => __( 'Three columns with icons and varying background colors.', 'ropecon' )
+		),
+	);
+
+	foreach( $patterns as $slug => $labels ) {
+		$content_raw = file_get_contents( get_template_directory_uri( ) . '/block-patterns/' . $slug . '.gb.html' ); 
+		$content = str_replace( 'IMG_ROOT', get_template_directory_uri( ) . '/images/block-pattern-preview', $content_raw );
+		register_block_pattern(
+			'ropecon/' . $slug,
+			array(
+				'title' => $labels['title'],
+				'content' => $content,
+				'description' => $labels['description'],
+				'categories' => array( 'ropecon' ),
+				'viewportWidth' => 1200
+			)
+		);
+	}
+
+}
+
+/* */
+
+add_filter( 'render_block', 'ropecon_render_block_image_information', 10, 2 );
+
+function ropecon_render_block_image_information( $content, $block ) {
+	if( $block['blockName'] == 'core/media-text' ) {
+		$media = get_post( $block['attrs']['mediaId'] );
+
+		if( strlen( $media->post_content ) < 1 ) {
+			return $content;
+		}
+
+		$replace_this = '</figure>';
+		$replace_with = '<div class="image-information">' .
+			'<span class="icon icon-Information" title="' . $media->post_content . '"></span>' .
+			'<span class="info" style="display: none;">' . $media->post_content . '</span>' .
+			'</div>';
+
+		return str_replace( $replace_this, $replace_with . $replace_this, $content );
+	}
+
+	return $content;
+}
 
 ?>
