@@ -211,25 +211,36 @@ function ropecon_init_block_patterns( ) {
 
 }
 
-/* */
+/*  Show image information  */
 
 add_filter( 'render_block', 'ropecon_render_block_image_information', 10, 2 );
 
 function ropecon_render_block_image_information( $content, $block ) {
 	if( $block['blockName'] == 'core/media-text' ) {
-		$media = get_post( $block['attrs']['mediaId'] );
+		$media = $block['attrs']['mediaId'];
+	}
+
+	if( $block['blockName'] == 'core/cover' ) {
+		if( $block['attrs']['url'] ) {
+			$media = $block['attrs']['id'];
+		}
+	}
+
+	if( isset( $media ) ) {
+		$media = get_post( $media );
 
 		if( strlen( $media->post_content ) < 1 ) {
 			return $content;
 		}
 
-		$replace_this = '</figure>';
-		$replace_with = '<div class="image-information">' .
+		$markup = '<div class="image-information">' .
 			'<span class="icon icon-Information" title="' . $media->post_content . '"></span>' .
-			'<span class="info" style="display: none;">' . $media->post_content . '</span>' .
+			'<span class="info">' . $media->post_content . '</span>' .
 			'</div>';
 
-		return str_replace( $replace_this, $replace_with . $replace_this, $content );
+		$img_end = strpos( $content, '>', strpos( $content, '<img' ) ); // + strpos( $content, '<img' );
+
+		return substr_replace( $content, $markup, $img_end + 1, 0 );
 	}
 
 	return $content;

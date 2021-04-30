@@ -429,13 +429,61 @@ p[class^="icon-"], p[class*=" icon-"] {
  *  Image information
  *
  */
+.wp-block-media-text,
+.wp-block-media-text__media {
+	position: relative;
+}
 
 .image-information {
 	position: absolute;
-	bottom: 10px;
-	right: 10px;
+	z-index: 2;
+	width: 100%;
+	bottom: 0;
+
+	display: grid;
+	grid-template-columns: 50px auto;
+	grid-template-areas: "area-icon area-info";
+	align-items: center;
+
 	color: #fff;
 }
 	.image-information span.icon {
+		display: block;
+		grid-area: area-icon;
+
+		width: 30px;
+		padding: 3px;
+		margin: 10px;
+
 		font-size: 24px;
+
+		border-radius: 50%;
+		transition: 200ms all;
 	}
+		*:hover > .image-information span.icon {
+			background-color: rgba(0,0,0,0.5);
+		}
+	.image-information span.info {
+		display: none;
+		grid-area: area-info;
+
+		font-family: Montserrat, Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		font-weight: 500;
+		text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+	}
+		.image-information.information-visible span.info {
+			display: block;
+		}
+
+@media screen and (min-width:768px) {
+	.wp-block-cover .image-information,
+	.wp-block-media-text.has-media-on-the-right .image-information {
+		grid-template-columns: auto 50px;
+		grid-template-areas: "area-info area-icon";
+	}
+		.wp-block-cover .image-information span.info,
+		.wp-block-media-text.has-media-on-the-right .image-information span.info {
+			text-align: right;
+		}
+}
