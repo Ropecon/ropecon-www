@@ -55,15 +55,15 @@ wp.blocks.registerBlockType(
 				el( 'p', { class: 'icon-' + props.attributes.icon }, '' ),
 				el( wp.blockEditor.InspectorControls, null,
 					el( wp.components.PanelBody, { title: __( 'Icon', 'ropecon' ) },
-						el( wp.components.SelectControl, {
+						el( wp.components.ComboboxControl, {
 							label: __( 'Icon Name', 'ropecon' ),
 							options: icons,
 							value: props.attributes.icon,
 							onChange: function( value ) {
 								props.setAttributes( { icon: value } );
 							}
-						} )
-					)
+						} ),
+					),
 				),
 			] );
 		},
