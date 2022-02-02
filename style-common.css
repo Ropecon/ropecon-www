@@ -504,16 +504,3 @@ p[class^="icon-"], p[class*=" icon-"] {
 			text-align: right;
 		}
 }
-
-/*
- *  Parallax
- *
- */
-
-.parallax-window {
-	background-color: transparent !important;
-}
-	.parallax-mirror img {
-		width: 100% !important;
-		object-position: unset !important;
-	}
