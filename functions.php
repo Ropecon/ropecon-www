@@ -102,7 +102,7 @@ function ropecon_styles_scripts( ) {
 	wp_enqueue_style( get_template( ) . '-temp', get_template_directory_uri( ) . '/style-temp.css', array( get_template( ) ) );
 
 	// Responsive design
-	// wp_enqueue_style( get_template( ) . '-resp-xxx', get_template_directory_uri( ) . '/style-resp-xxx.css', array( get_template( ) ), null, 'only screen and (min-width: xxxpx)' ); 
+	// wp_enqueue_style( get_template( ) . '-resp-xxx', get_template_directory_uri( ) . '/style-resp-xxx.css', array( get_template( ) ), null, 'only screen and (min-width: xxxpx)' );
 
 	// Fonts from Google Fonts
 	wp_enqueue_style( get_template( ) . '-google-fonts' );
@@ -112,7 +112,7 @@ function ropecon_styles_scripts( ) {
 	wp_register_script( 'jquery-waitforimages', get_template_directory_uri( ) . '/lib/jquery.waitforimages.min.js', array( 'jquery' ), '2.4.0' );
 
 	// Javascript
-	wp_enqueue_script( get_template( ), get_template_directory_uri( ) . '/script.js', array( 'jquery', 'jquery-browser-mobile', 'jquery-parallax' ) );
+	wp_enqueue_script( get_template( ), get_template_directory_uri( ) . '/script.js', array( 'jquery', 'jquery-browser-mobile' ) );
 
 	// Dynamic menu
 	wp_enqueue_script( get_template( ) . '-menu', get_template_directory_uri( ) . '/script-menu.js', array( 'jquery', 'jquery-waitforimages', 'wp-i18n' ) );
@@ -195,7 +195,7 @@ function ropecon_init_block_patterns( ) {
 	);
 
 	foreach( $patterns as $slug => $labels ) {
-		$content_raw = file_get_contents( get_template_directory_uri( ) . '/block-patterns/' . $slug . '.gb.html' ); 
+		$content_raw = file_get_contents( get_template_directory_uri( ) . '/block-patterns/' . $slug . '.gb.html' );
 		$content = str_replace( 'IMG_ROOT', get_template_directory_uri( ) . '/images/block-pattern-preview', $content_raw );
 		register_block_pattern(
 			'ropecon/' . $slug,
