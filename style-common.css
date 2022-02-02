@@ -513,9 +513,7 @@ p[class^="icon-"], p[class*=" icon-"] {
 .parallax-window {
 	background-color: transparent !important;
 }
-	.parallax-mirror {
-		z-index: 1 !important;
+	.parallax-mirror img {
+		width: 100% !important;
+		object-position: unset !important;
 	}
-		.parallax-mirror img {
-			width: 100% !important;
-		}

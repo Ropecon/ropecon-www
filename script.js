@@ -31,14 +31,6 @@ jQuery( function( e ) {
 		jQuery( this ).addClass( 'fade-in-up is-hidden' );
 	} );
 
-	// Parallax for images
-
-	jQuery( '.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__media img' ).each( function( e ) {
-		jQuery( this ).wrap( '<div class="parallax-slider" />' );
-		parent = jQuery( this ).closest( '.wp-block-media-text__media' );
-		parent.addClass( 'parallax-window' ).parallax( { naturalWidth: jQuery( this ).attr( 'width' ), naturalHeight: jQuery( this ).attr( 'height' ) } );
-	} );
-
 	// Resize and scroll events
 
 	jQuery( window ).resize( resize_or_scroll ).scroll( resize_or_scroll );

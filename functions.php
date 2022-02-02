@@ -109,7 +109,6 @@ function ropecon_styles_scripts( ) {
 
 	// jQuery plugins
 	wp_register_script( 'jquery-browser-mobile', get_template_directory_uri( ) . '/lib/jquery.browser.mobile.js', array( 'jquery' ), '2014-08-01' );
-	wp_register_script( 'jquery-parallax', get_template_directory_uri( ) . '/lib/jquery.parallax.min.js', array( 'jquery' ), '1.5.0' );
 	wp_register_script( 'jquery-waitforimages', get_template_directory_uri( ) . '/lib/jquery.waitforimages.min.js', array( 'jquery' ), '2.4.0' );
 
 	// Javascript
