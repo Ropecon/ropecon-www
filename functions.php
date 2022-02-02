@@ -25,7 +25,7 @@ function ropecon_after_setup_theme( ) {
 	add_post_type_support( 'page', 'excerpt' );
 
 	/*  Hide core block patterns  */
-	remove_theme_support( 'core-block-patterns' ); 
+	remove_theme_support( 'core-block-patterns' );
 
 	/*  Sidebars  */
 	register_sidebar( array(
