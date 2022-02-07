@@ -138,7 +138,10 @@ function ropecon_block_editor_assets( ) {
 	wp_enqueue_style( get_template( ) . '-google-fonts' );
 
 	wp_enqueue_script( get_template( ) . '-gutenberg', get_template_directory_uri( ) . '/script-gutenberg.js', array( 'wp-blocks', 'wp-dom', 'wp-i18n' ), time( ), true );
+	wp_set_script_translations( get_template( ) . '-gutenberg', 'ropecon', get_template_directory( ) . '/languages/' );
+
 	wp_enqueue_script( get_template( ) . '-gutenberg-block-icon', get_template_directory_uri( ) . '/script-gutenberg-block-icon.js', array( 'wp-blocks', 'wp-dom', 'wp-i18n' ), time( ), true );
+	wp_set_script_translations( get_template( ) . '-gutenberg-block-icon', 'ropecon', get_template_directory( ) . '/languages/' );
 }
 
 add_action( 'init', 'ropecon_init_gutenberg' );
