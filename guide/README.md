@@ -26,9 +26,19 @@ Antamalla kannelle CSS-luokan `is-style-full-height`, kannesta tulee koko ruudun
 
 ### Mukautettu lohko: Kuvake
 
-Sivustolla voidaan käyttää [Iconsmind](https://iconsmind.com/)-kuvaketeeman kuvakkeita käyttämällä *Kuvake*-lohkoa ja valitsemalla kuvakkeen nimen listasta.
+Sivustolla voidaan käyttää [Iconsmind](https://iconsmind.com/)-kuvaketeeman kuvakkeita käyttämällä *Kuvake*-lohkoa ja valitsemalla kuvakkeen nimen listasta. *Myöhemmin tarkoituksena on näyttää myös esikatselu kaikista kuvakkeista, toistaiseksi kuvakkeita voi selata helpoiten [tästä](https://iconsmind.com/view_icons/).*
 
 Listalle on lisätty myös kuvake "Ropecon", jolloin kuvakkeeksi tulee Ropeconin logo.
+
+## Lohkomallit
+
+Teemassa on joitain lohkomalleja, joita voi käyttää uusien sivujen ulkoasun rakentamisen helpottamiseen. Lohkomalleilla voi lisätä sisältöön valmiiksi rakennettuja, yleistä visuaalista tyyliä noudattavia lohkoryhmiä.
+
+*Otsikkokansi* luo kannen, jota voi käyttää sivun otsikkona.
+
+*Kolme kuvakesaraketta* luo kolmen sarakkeen asettelun, joissa sarakkeille on asetettu taustavärit. Sarakkeilla on sisältönä kuvake, otsikko ja tekstilohkot.
+
+*Lohkomalleja voidaan lisätä teemaan tarvittaessa; tee pyyntö [GitHubissa](https://github.com/Ropecon/ropecon-www/issues/new).*
 
 ## Lisätoiminnallisuudet
 
