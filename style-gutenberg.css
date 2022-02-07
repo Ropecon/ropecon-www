@@ -217,3 +217,8 @@ h1.wp-block {
 		background-position: 100% 0;
 	}
 
+/*  Fix flickering in block patterns  */
+
+.block-editor-block-patterns-list__item {
+	width: 95%;
+}
