@@ -67,6 +67,14 @@ h1.wp-block {
 				margin-left: 2em !important;
 			}
 
+				.editor-styles-wrapper .wp-block-columns.is-style-content-in-boxes .wp-block-column > * {
+					height: auto;
+				}
+				.editor-styles-wrapper .wp-block-columns.is-style-content-in-boxes .wp-block-column > figure:first-child {
+					margin: -2em -2em 0 -2em;
+				}
+
+
 /*  Cover  */
 
 	/*  Block style: Full height  */
