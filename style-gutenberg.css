@@ -11,19 +11,19 @@
 	font-family: Lora, Helvetica, Arial, sans-serif !important;
 	color: rgb(51,51,51);
 }
-	.editor-styles-wrapper h1,
-	.editor-styles-wrapper h2,
-	.editor-styles-wrapper h3,
-	.editor-styles-wrapper h4,
-	.editor-styles-wrapper h5,
-	.editor-styles-wrapper h6,
-	.editor-styles-wrapper .has-large-font-size {
+	.editor-styles-wrapper .is-root-container h1,
+	.editor-styles-wrapper .is-root-container h2,
+	.editor-styles-wrapper .is-root-container h3,
+	.editor-styles-wrapper .is-root-container h4,
+	.editor-styles-wrapper .is-root-container h5,
+	.editor-styles-wrapper .is-root-container h6,
+	.editor-styles-wrapper .is-root-container .has-large-font-size {
 		font-weight: 700 !important;
 		font-family: Montserrat, Helvetica, Arial, sans-serif;
 	}
 
-	.editor-styles-wrapper h1 { font-size: 4em !important; }
-	.editor-styles-wrapper h2 { font-size: 1.5em !important; }
+	.editor-styles-wrapper .is-root-container h1 { font-size: 4em !important; }
+	.editor-styles-wrapper .is-root-container h2 { font-size: 1.5em !important; }
 
 .editor-styles-wrapper .is-root-container > .wp-block,
 .editor-styles-wrapper .is-root-container > .wp-block > .block-editor-block-list__block {
