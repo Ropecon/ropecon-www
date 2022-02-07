@@ -228,8 +228,7 @@ function ropecon_render_block_image_information( $content, $block ) {
 			$media = $block['attrs']['id'];
 		}
 	}
-
-	if( isset( $media ) ) {
+	if( isset( $media ) && $media > 0 ) {
 		$media = get_post( $media );
 
 		if( strlen( $media->post_content ) < 1 ) {
