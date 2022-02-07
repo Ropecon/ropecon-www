@@ -188,8 +188,8 @@ function ropecon_init_block_patterns( ) {
 			'title' => __( 'Title cover', 'ropecon' ),
 			'description' => __( 'Centered title on top of image.', 'ropecon' )
 		),
-		'three-icon-boxes' => array(
-			'title' => __( 'Three icon boxes', 'ropecon' ),
+		'three-icon-columns' => array(
+			'title' => __( 'Three icon columns', 'ropecon' ),
 			'description' => __( 'Three columns with icons and varying background colors.', 'ropecon' )
 		),
 	);
