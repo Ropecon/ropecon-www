@@ -3,9 +3,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ropecon website\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ropecon\n"
-"POT-Creation-Date: 2021-02-28T19:11:02+02:00\n"
-"PO-Revision-Date: 2021-02-28 19:11+0200\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/theme-ropecon-wp\n"
+"POT-Creation-Date: 2022-02-07T12:00:43+02:00\n"
+"PO-Revision-Date: 2022-02-07 12:01+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -36,65 +36,49 @@ msgstr "https://digitoucan.fi/"
 msgid "Read the rest of this article &raquo;"
 msgstr "Lue loput tästä artikkelista &raquo;"
 
-#: functions.php:25
+#: functions.php:32
 msgid "Footer Widgets"
 msgstr "Alaviitteen vimpaimet"
 
-#: functions.php:35
+#: functions.php:42
 msgid "Main navigation"
 msgstr "Päänavigaatio"
 
-#: functions.php:41
+#: functions.php:48
 msgid "Black"
 msgstr "Musta"
 
-#: functions.php:46
+#: functions.php:53
 msgid "Dark Gray"
 msgstr "Tummanharmaa"
 
-#: functions.php:51
+#: functions.php:58
 msgid "Light Gray"
 msgstr "Vaaleanharmaa"
 
-#: functions.php:56
+#: functions.php:63
 msgid "White"
 msgstr "Valkoinen"
 
-#: functions.php:61
+#: functions.php:68
 msgid "Ropecon Highlight #1"
 msgstr "Ropecon korostusväri #1"
 
-#: functions.php:139
+#: functions.php:188
 msgid "Title cover"
 msgstr "Otsikkokansi"
 
-#: functions.php:141
+#: functions.php:189
 msgid "Centered title on top of image."
 msgstr "Keskitetty otsikko kuvan päällä."
 
-#: functions.php:148
-msgid "Two columns"
-msgstr "Kaksi saraketta"
+#: functions.php:192
+msgid "Three icon columns"
+msgstr "Kolme kuvakesaraketta"
 
-#: functions.php:150
-msgid "Text and image in two columns."
-msgstr "Teksti ja kuva kahdessa sarakkeessa."
-
-#: functions.php:157
-msgid "Three boxes"
-msgstr "Kolme laatikkoa"
-
-#: functions.php:159
-msgid "Three columns with different background colors."
-msgstr "Kolme saraketta erivärisillä taustoilla."
-
-#: functions.php:166
-msgid "Text overlaying image"
-msgstr "Teksti kuvan päällä"
-
-#: functions.php:168
-msgid "Text on top of image (left or right)."
-msgstr "Teksti kuvan päällä (vasen tai oikea)."
+#: functions.php:193
+msgid "Three columns with icons and varying background colors."
+msgstr "Kolme saraketta kuvakkeilla ja erivärisillä taustoilla."
 
 #: index.php:8
 msgid "Content not found."
@@ -104,6 +88,44 @@ msgstr "Sisältöä ei löytynyt."
 msgid "The content you were looking for was not found."
 msgstr "Etsimääsi sisältöä ei löytynyt."
 
+#: script-gutenberg-block-icon.js:39 script-gutenberg-block-icon.js:57
+msgid "Icon"
+msgstr "Kuvake"
+
+#: script-gutenberg-block-icon.js:59
+msgid "Icon Name"
+msgstr "Kuvakkeen nimi"
+
+#: script-gutenberg.js:31 script-gutenberg.js:47 script-gutenberg.js:63
+#: script-gutenberg.js:79
+msgid "Default"
+msgstr "Oletus"
+
+#: script-gutenberg.js:36
+msgid "Content in boxes"
+msgstr "Sisältö laatikoissa"
+
+#: script-gutenberg.js:52
+msgid "Full height"
+msgstr "Täyskorkeus"
+
+#: script-gutenberg.js:68
+msgid "Text overlaying image"
+msgstr "Teksti kuvan päällä"
+
+#: script-gutenberg.js:84
+msgid "Currency"
+msgstr "Valuutta"
+
 #: script-menu.js:4
 msgid "Toggle menu"
 msgstr "Valikko päälle/pois"
+
+#~ msgid "Text and image in two columns."
+#~ msgstr "Teksti ja kuva kahdessa sarakkeessa."
+
+#~ msgid "Three boxes"
+#~ msgstr "Kolme laatikkoa"
+
+#~ msgid "Text on top of image (left or right)."
+#~ msgstr "Teksti kuvan päällä (vasen tai oikea)."

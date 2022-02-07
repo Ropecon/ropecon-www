@@ -1,15 +1,15 @@
-# Copyright (C) 2021 Pasi Lallinaho
+# Copyright (C) 2022 Pasi Lallinaho
 # This file is distributed under the .
 msgid ""
 msgstr ""
 "Project-Id-Version: Ropecon 2021-02\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ropecon\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/theme-ropecon-wp\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-28T19:11:02+02:00\n"
+"POT-Creation-Date: 2022-02-07T12:00:43+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: ropecon\n"
@@ -34,64 +34,48 @@ msgstr ""
 msgid "Read the rest of this article &raquo;"
 msgstr ""
 
-#: functions.php:25
+#: functions.php:32
 msgid "Footer Widgets"
 msgstr ""
 
-#: functions.php:35
+#: functions.php:42
 msgid "Main navigation"
 msgstr ""
 
-#: functions.php:41
+#: functions.php:48
 msgid "Black"
 msgstr ""
 
-#: functions.php:46
+#: functions.php:53
 msgid "Dark Gray"
 msgstr ""
 
-#: functions.php:51
+#: functions.php:58
 msgid "Light Gray"
 msgstr ""
 
-#: functions.php:56
+#: functions.php:63
 msgid "White"
 msgstr ""
 
-#: functions.php:61
+#: functions.php:68
 msgid "Ropecon Highlight #1"
 msgstr ""
 
-#: functions.php:139
+#: functions.php:188
 msgid "Title cover"
 msgstr ""
 
-#: functions.php:141
+#: functions.php:189
 msgid "Centered title on top of image."
 msgstr ""
 
-#: functions.php:148
-msgid "Two columns"
+#: functions.php:192
+msgid "Three icon columns"
 msgstr ""
 
-#: functions.php:150
-msgid "Text and image in two columns."
-msgstr ""
-
-#: functions.php:157
-msgid "Three boxes"
-msgstr ""
-
-#: functions.php:159
-msgid "Three columns with different background colors."
-msgstr ""
-
-#: functions.php:166
-msgid "Text overlaying image"
-msgstr ""
-
-#: functions.php:168
-msgid "Text on top of image (left or right)."
+#: functions.php:193
+msgid "Three columns with icons and varying background colors."
 msgstr ""
 
 #: index.php:8
@@ -100,6 +84,38 @@ msgstr ""
 
 #: index.php:9
 msgid "The content you were looking for was not found."
+msgstr ""
+
+#: script-gutenberg-block-icon.js:39
+#: script-gutenberg-block-icon.js:57
+msgid "Icon"
+msgstr ""
+
+#: script-gutenberg-block-icon.js:59
+msgid "Icon Name"
+msgstr ""
+
+#: script-gutenberg.js:31
+#: script-gutenberg.js:47
+#: script-gutenberg.js:63
+#: script-gutenberg.js:79
+msgid "Default"
+msgstr ""
+
+#: script-gutenberg.js:36
+msgid "Content in boxes"
+msgstr ""
+
+#: script-gutenberg.js:52
+msgid "Full height"
+msgstr ""
+
+#: script-gutenberg.js:68
+msgid "Text overlaying image"
+msgstr ""
+
+#: script-gutenberg.js:84
+msgid "Currency"
 msgstr ""
 
 #: script-menu.js:4
