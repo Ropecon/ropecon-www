@@ -158,15 +158,19 @@ img {
 /*  Cover  */
 
 #content .wp-block-cover.is-style-full-height {
-	height: 100vh;
+	min-height: 100vh;
 }
+	#content .wp-block-cover.is-style-full-height > .wp-block-cover__inner-container {
+		margin: 3em 0;
+	}
+
 	.wp-block-cover h1,
 	.wp-block-cover h2,
 	.wp-block-cover h3,
 	.wp-block-cover h4,
 	.wp-block-cover h5,
 	.wp-block-cover h6 {
-		text-shadow: 2px 2px 0 rgba(0,0,0,1)		
+		text-shadow: 2px 2px 0 rgba(0,0,0,1);
 	}
 
 /*  Group  */

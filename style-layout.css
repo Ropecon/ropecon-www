@@ -13,7 +13,8 @@ body {
 	padding-left: 30px;
 }
 	#content > .alignfull {
-		padding: 0;
+		padding-top: 0;
+		padding-bottom: 0;
 	}
 
 @media screen and (min-width: 1024px) {
@@ -192,4 +193,3 @@ footer,
 		color: rgba(245,245,245,0.5);
 		font-size: 80%;
 	}
-
