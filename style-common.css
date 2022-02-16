@@ -185,34 +185,28 @@ img {
 	padding: 0;
 	background-color: #fff;
 	overflow: hidden;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
 }
+
+	.wp-block-media-text .wp-block-media-text__media,
 	.wp-block-media-text .wp-block-media-text__content {
-		margin: 0;
-		padding: var(--gutter-sm);
-		grid-row: 1 !important;
+		grid-column: auto;
 	}
-	.wp-block-media-text .wp-block-media-text__media {
-		grid-row: 2 !important;
-		max-height: 50vh;
-		overflow: hidden;
-	}
-
-		.wp-block-media-text .wp-block-media-text__content > :first-child { margin-top: 0; }
-		.wp-block-media-text .wp-block-media-text__content > :last-child { margin-bottom: 0; }
-
-@media screen and (min-width: 600px) {
-	.wp-block-media-text {
-		grid-template-columns: 100% !important;
-	}
-		.wp-block-media-text .wp-block-media-text__media,
 		.wp-block-media-text .wp-block-media-text__content {
-			grid-column: auto;
+			margin: 0;
+			padding: var(--gutter-sm);
+			grid-row: 1 !important;
 		}
 		.wp-block-media-text .wp-block-media-text__media {
 			grid-column: 1 !important;
 			grid-row: 2 !important;
+			max-height: 50vh;
+			overflow: hidden;
 		}
-}
+
+			.wp-block-media-text .wp-block-media-text__content > :first-child { margin-top: 0; }
+			.wp-block-media-text .wp-block-media-text__content > :last-child { margin-bottom: 0; }
 
 @media screen and (min-width: 768px) {
 	.wp-block-media-text {
@@ -266,19 +260,19 @@ img {
 	}
 }
 
-	/*  Block style: Text overlaying image  */
+/*  Block style: Text overlaying image  */
 
+@media screen and (min-width:768px) {
 	.wp-block-media-text.is-style-text-overlaying-image {
-		display: block;
-		position: relative;
+		display: grid;
 	}
 		.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__media,
 		.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__content {
-			position: absolute;
+			grid-row: 1 !important;
+			position: relative;
 			top: 0;
 			left: 0;
 		}
-
 		.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__media {
 			grid-column: 1 !important;
 			width: 200%;
@@ -287,15 +281,6 @@ img {
 			color: #fff;
 			position: relative;
 			z-index: 2;
-		}
-
-@media screen and (min-width:768px) {
-	.wp-block-media-text.is-style-text-overlaying-image {
-		display: grid;
-	}
-		.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__media,
-		.wp-block-media-text.is-style-text-overlaying-image .wp-block-media-text__content {
-			position: relative;
 		}
 }
 
