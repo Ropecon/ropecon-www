@@ -160,6 +160,14 @@ img {
 #content .wp-block-cover.is-style-full-height {
 	height: 100vh;
 }
+	.wp-block-cover h1,
+	.wp-block-cover h2,
+	.wp-block-cover h3,
+	.wp-block-cover h4,
+	.wp-block-cover h5,
+	.wp-block-cover h6 {
+		text-shadow: 2px 2px 0 rgba(0,0,0,1)		
+	}
 
 /*  Group  */
 
@@ -431,6 +439,7 @@ p[class^="icon-"], p[class*=" icon-"] {
  *  Image information
  *
  */
+
 .wp-block-media-text,
 .wp-block-media-text__media {
 	position: relative;
