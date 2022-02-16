@@ -99,11 +99,6 @@ function ropecon_styles_scripts( ) {
 	wp_enqueue_style( get_template( ) . '-common', get_template_directory_uri( ) . '/style-common.css', array( get_template( ) ) );
 	wp_enqueue_style( get_template( ) . '-fonts', get_template_directory_uri( ) . '/style-fonts.css', array( get_template( ) ) );
 
-	wp_enqueue_style( get_template( ) . '-temp', get_template_directory_uri( ) . '/style-temp.css', array( get_template( ) ) );
-
-	// Responsive design
-	// wp_enqueue_style( get_template( ) . '-resp-xxx', get_template_directory_uri( ) . '/style-resp-xxx.css', array( get_template( ) ), null, 'only screen and (min-width: xxxpx)' );
-
 	// Fonts from Google Fonts
 	wp_enqueue_style( get_template( ) . '-google-fonts' );
 
