@@ -70,9 +70,58 @@ function ropecon_after_setup_theme( ) {
 			'color' => '#5472d2'
 		),
 	) );
-
-	/*  Options  */
 }
+
+/*
+ *  Register extra settings
+ *
+ */
+
+add_action( 'admin_init', function( ) {
+	/*  Settings  */
+	register_setting(
+		'reading',
+		'ropecon_404_page',
+		array(
+			'type' => 'integer',
+			'description' => __( '404 Error Page', 'ropecon' ),
+			'sanitize_callback' => 'ropecon_sanitize_page',
+			'default' => 0
+		)
+	);
+
+	add_settings_field(
+		'ropecon_404_page',
+		__( '404 Error Page', 'ropecon' ),
+		'ropecon_404_page_field',
+		'reading',
+	);
+} );
+
+function ropecon_sanitize_page( $input ) {
+	if( 'page' == get_post_type( $input ) ) {
+		return $input;
+	}
+	return 0;
+}
+
+function ropecon_404_page_field( ) {
+	wp_dropdown_pages( array(
+		'selected' => get_option( 'ropecon_404_page' ),
+		'name' => 'ropecon_404_page',
+		'show_option_none' => __( '-- Use built-in --', 'ropecon' ),
+		'option_none_value' => 0
+	) );
+}
+
+add_filter( 'display_post_states', function( $states, $post ) {
+	if( $post->ID == get_option( 'ropecon_404_page' ) ||
+		( function_exists( 'pll_get_post' ) && function_exists( 'pll_default_language' ) && pll_get_post( $post->ID, pll_default_language( ) ) == get_option( 'ropecon_404_page' ) ) ) {
+		$states['ropecon_404_page'] = __( '404 Error Page', 'ropecon' );
+	}
+
+	return $states;
+}, 10, 2 );
 
 /*
  *  Include stylesheets and scripts
