@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-02-07T12:00:43+02:00\n"
+"POT-Creation-Date: 2022-02-23T11:05:47+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: ropecon\n"
@@ -62,27 +62,36 @@ msgstr ""
 msgid "Ropecon Highlight #1"
 msgstr ""
 
-#: functions.php:188
+#: functions.php:87
+#: functions.php:95
+msgid "404 Error Page"
+msgstr ""
+
+#: functions.php:112
+msgid "-- Use built-in --"
+msgstr ""
+
+#: functions.php:228
 msgid "Title cover"
 msgstr ""
 
-#: functions.php:189
+#: functions.php:229
 msgid "Centered title on top of image."
 msgstr ""
 
-#: functions.php:192
+#: functions.php:232
 msgid "Three icon columns"
 msgstr ""
 
-#: functions.php:193
+#: functions.php:233
 msgid "Three columns with icons and varying background colors."
 msgstr ""
 
-#: index.php:8
-msgid "Content not found."
+#: index.php:16
+msgid "Content not found"
 msgstr ""
 
-#: index.php:9
+#: index.php:17
 msgid "The content you were looking for was not found."
 msgstr ""
 
