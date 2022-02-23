@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-02-23T11:05:47+02:00\n"
+"POT-Creation-Date: 2022-02-23T13:37:22+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: ropecon\n"
@@ -64,6 +64,7 @@ msgstr ""
 
 #: functions.php:87
 #: functions.php:95
+#: functions.php:120
 msgid "404 Error Page"
 msgstr ""
 
@@ -71,27 +72,31 @@ msgstr ""
 msgid "-- Use built-in --"
 msgstr ""
 
-#: functions.php:228
+#: functions.php:237
 msgid "Title cover"
 msgstr ""
 
-#: functions.php:229
+#: functions.php:238
 msgid "Centered title on top of image."
 msgstr ""
 
-#: functions.php:232
+#: functions.php:241
 msgid "Three icon columns"
 msgstr ""
 
-#: functions.php:233
+#: functions.php:242
 msgid "Three columns with icons and varying background colors."
 msgstr ""
 
-#: index.php:16
+#: functions.php:306
+msgid "Description"
+msgstr ""
+
+#: index.php:22
 msgid "Content not found"
 msgstr ""
 
-#: index.php:17
+#: index.php:23
 msgid "The content you were looking for was not found."
 msgstr ""
 

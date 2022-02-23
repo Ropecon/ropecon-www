@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ropecon website\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/theme-ropecon-wp\n"
-"POT-Creation-Date: 2022-02-23T11:05:47+02:00\n"
-"PO-Revision-Date: 2022-02-23 11:26+0200\n"
+"POT-Creation-Date: 2022-02-23T13:37:22+02:00\n"
+"PO-Revision-Date: 2022-02-23 13:37+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -64,7 +64,7 @@ msgstr "Valkoinen"
 msgid "Ropecon Highlight #1"
 msgstr "Ropecon korostusväri #1"
 
-#: functions.php:87 functions.php:95
+#: functions.php:87 functions.php:95 functions.php:120
 msgid "404 Error Page"
 msgstr "404 -virhesivu"
 
@@ -72,27 +72,31 @@ msgstr "404 -virhesivu"
 msgid "-- Use built-in --"
 msgstr "-- Käytä sisäänrakennettua --"
 
-#: functions.php:228
+#: functions.php:237
 msgid "Title cover"
 msgstr "Otsikkokansi"
 
-#: functions.php:229
+#: functions.php:238
 msgid "Centered title on top of image."
 msgstr "Keskitetty otsikko kuvan päällä."
 
-#: functions.php:232
+#: functions.php:241
 msgid "Three icon columns"
 msgstr "Kolme kuvakesaraketta"
 
-#: functions.php:233
+#: functions.php:242
 msgid "Three columns with icons and varying background colors."
 msgstr "Kolme saraketta kuvakkeilla ja erivärisillä taustoilla."
 
-#: index.php:16
+#: functions.php:306
+msgid "Description"
+msgstr "Kuvaus"
+
+#: index.php:22
 msgid "Content not found"
 msgstr "Sisältöä ei löytynyt"
 
-#: index.php:17
+#: index.php:23
 msgid "The content you were looking for was not found."
 msgstr "Etsimääsi sisältöä ei löytynyt."
 
