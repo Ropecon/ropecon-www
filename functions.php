@@ -90,14 +90,16 @@ function ropecon_google_fonts_init( ) {
 add_action( 'wp_enqueue_scripts', 'ropecon_styles_scripts' );
 
 function ropecon_styles_scripts( ) {
+	$ver = '20220223';
+
 	// Eric Meyer: CSS reset | http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
 	wp_enqueue_style( 'css-reset', get_template_directory_uri( ) . '/reset.css' );
 
 	// Main style sheets
-	wp_enqueue_style( get_template( ), get_template_directory_uri( ) . '/style.css', array( 'css-reset' ) );
-	wp_enqueue_style( get_template( ) . '-layout', get_template_directory_uri( ) . '/style-layout.css', array( get_template( ) ) );
-	wp_enqueue_style( get_template( ) . '-common', get_template_directory_uri( ) . '/style-common.css', array( get_template( ) ) );
-	wp_enqueue_style( get_template( ) . '-fonts', get_template_directory_uri( ) . '/style-fonts.css', array( get_template( ) ) );
+	wp_enqueue_style( get_template( ), get_template_directory_uri( ) . '/style.css', array( 'css-reset' ), $ver );
+	wp_enqueue_style( get_template( ) . '-layout', get_template_directory_uri( ) . '/style-layout.css', array( get_template( ) ), $ver );
+	wp_enqueue_style( get_template( ) . '-common', get_template_directory_uri( ) . '/style-common.css', array( get_template( ) ), $ver );
+	wp_enqueue_style( get_template( ) . '-fonts', get_template_directory_uri( ) . '/style-fonts.css', array( get_template( ) ), $ver );
 
 	// Fonts from Google Fonts
 	wp_enqueue_style( get_template( ) . '-google-fonts' );
@@ -107,14 +109,14 @@ function ropecon_styles_scripts( ) {
 	wp_register_script( 'jquery-waitforimages', get_template_directory_uri( ) . '/lib/jquery.waitforimages.min.js', array( 'jquery' ), '2.4.0' );
 
 	// Javascript
-	wp_enqueue_script( get_template( ), get_template_directory_uri( ) . '/script.js', array( 'jquery', 'jquery-browser-mobile' ) );
+	wp_enqueue_script( get_template( ), get_template_directory_uri( ) . '/script.js', array( 'jquery', 'jquery-browser-mobile' ), $ver );
 
 	// Dynamic menu
 	wp_enqueue_script( get_template( ) . '-menu', get_template_directory_uri( ) . '/script-menu.js', array( 'jquery', 'jquery-waitforimages', 'wp-i18n' ) );
 	wp_set_script_translations( get_template( ) . '-menu', 'ropecon', get_template_directory( ) . '/languages' );
 	wp_localize_script( get_template( ) . '-menu', 'theme', array( 'template_directory_uri' => get_template_directory_uri( ) ) );
 
-	wp_enqueue_style( get_template( ) . '-menu', get_template_directory_uri( ) . '/style-menu.css', array( get_template( ) ) );
+	wp_enqueue_style( get_template( ) . '-menu', get_template_directory_uri( ) . '/style-menu.css', array( get_template( ) ), $ver );
 }
 
 /*
