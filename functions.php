@@ -294,4 +294,25 @@ function ropecon_render_block_image_information( $content, $block ) {
 	return $content;
 }
 
+/*
+ *  Add image information as a column to the media list in admin
+ *
+ */
+
+add_filter( 'manage_media_columns', function( $cols ) {
+	foreach( $cols as $col_id => $col_label ) {
+		$cols_new[$col_id] = $col_label;
+		if( $col_id == 'title' ) {
+			$cols_new['description'] = __( 'Description', 'ropecon' );
+		}
+	}
+	return $cols_new;
+} );
+
+add_action( 'manage_media_custom_column', function( $column_name, $media_id ) {
+	if( $column_name == 'description' ) {
+		echo get_the_content( $media_id );
+	}
+}, 10, 2 );
+
 ?>
