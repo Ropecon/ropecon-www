@@ -20,7 +20,7 @@ body {
 @media screen and (min-width: 1024px) {
 	.dynamic-width,
 	#content > *,
-	#content > .alignfull > div[class$="__inner-container"] {
+	#content > .alignfull > div[class*="__inner-container"] {
 		margin: 0 auto;
 		width: 80%;
 		max-width: 1200px;
@@ -30,7 +30,7 @@ body {
 		width: 90%;
 		max-width: 1350px;
 	}
-		#content > .alignwide > div[class$="__inner-container"] {
+		#content > .alignwide > div[class*="__inner-container"] {
 			padding-left: 5%;
 			padding-right: 5%;
 		}
@@ -40,7 +40,7 @@ body {
 		width: 100%;
 		max-width: 100vw;
 	}
-		#content > .alignfull > div[class$="__inner-container"] {
+		#content > .alignfull > div[class*="__inner-container"] {
 			padding-right: 30px;
 			padding-left: 30px;
 		}
