@@ -101,6 +101,12 @@ img {
 	clear: both;
 }
 
+/*  Buttons  */
+
+.wp-block-buttons {
+	margin-bottom: 1em;
+}
+
 /*  Columns  */
 
 .wp-block-columns {
