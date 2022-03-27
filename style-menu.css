@@ -51,6 +51,9 @@
 
 #header.compact nav ul.menu { display: none; }
 	#header.compact #title_main { margin-right: 0; }
+	#header.compact.open #title_main {
+		background-color: #232323;
+	}
 	#header.compact.open nav ul.menu {
 		display: block;
 		position: absolute;
