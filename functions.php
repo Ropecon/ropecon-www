@@ -139,7 +139,7 @@ function ropecon_google_fonts_init( ) {
 add_action( 'wp_enqueue_scripts', 'ropecon_styles_scripts' );
 
 function ropecon_styles_scripts( ) {
-	$ver = '20220327.2';
+	$ver = '20220327.3';
 
 	// Eric Meyer: CSS reset | http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
 	wp_enqueue_style( 'css-reset', get_template_directory_uri( ) . '/reset.css' );
@@ -161,7 +161,7 @@ function ropecon_styles_scripts( ) {
 	wp_enqueue_script( get_template( ), get_template_directory_uri( ) . '/script.js', array( 'jquery', 'jquery-browser-mobile' ), $ver );
 
 	// Dynamic menu
-	wp_enqueue_script( get_template( ) . '-menu', get_template_directory_uri( ) . '/script-menu.js', array( 'jquery', 'jquery-waitforimages', 'wp-i18n' ) );
+	wp_enqueue_script( get_template( ) . '-menu', get_template_directory_uri( ) . '/script-menu.js', array( 'jquery', 'jquery-waitforimages', 'wp-i18n' ), $ver );
 	wp_set_script_translations( get_template( ) . '-menu', 'ropecon', get_template_directory( ) . '/languages' );
 	wp_localize_script( get_template( ) . '-menu', 'theme', array( 'template_directory_uri' => get_template_directory_uri( ) ) );
 
