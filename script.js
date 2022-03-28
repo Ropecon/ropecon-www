@@ -1,18 +1,18 @@
 jQuery( function( e ) {
-	// Better mobile support for navigation
+	// Ponyfill for CSS var()s
+	cssVars( );
 
+	// Better mobile support for navigation
 	if( jQuery.browser.mobile ) {
 		jQuery( '#header #navi_main' ).removeClass( 'open-on-hover' ).addClass( 'open-on-click' );
 	}
 
 	// Image information
-
 	jQuery( '.image-information .icon' ).on( 'click', function( e ) {
 		jQuery( this ).closest( '.image-information' ).toggleClass( 'information-visible' );
 	} );
 
 	// Animate text
-
 	jQuery.fn.isAlmostInViewport = function( top_offset ) {
 		if( !top_offset ) {
 			top_offset = 100;
@@ -32,7 +32,6 @@ jQuery( function( e ) {
 	} );
 
 	// Resize and scroll events
-
 	jQuery( window ).resize( resize_or_scroll ).scroll( resize_or_scroll );
 	resize_or_scroll( );
 } );
@@ -45,4 +44,3 @@ function resize_or_scroll( ) {
 		}
 	} );
 }
-

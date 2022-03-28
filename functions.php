@@ -144,6 +144,7 @@ function ropecon_styles_scripts( ) {
 	// Eric Meyer: CSS reset | http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
 	wp_enqueue_style( 'css-reset', get_template_directory_uri( ) . '/reset.css' );
 
+
 	// Main style sheets
 	wp_enqueue_style( get_template( ), get_template_directory_uri( ) . '/style.css', array( 'css-reset' ), $ver );
 	wp_enqueue_style( get_template( ) . '-layout', get_template_directory_uri( ) . '/style-layout.css', array( get_template( ) ), $ver );
@@ -157,8 +158,11 @@ function ropecon_styles_scripts( ) {
 	wp_register_script( 'jquery-browser-mobile', get_template_directory_uri( ) . '/lib/jquery.browser.mobile.js', array( 'jquery' ), '2014-08-01' );
 	wp_register_script( 'jquery-waitforimages', get_template_directory_uri( ) . '/lib/jquery.waitforimages.min.js', array( 'jquery' ), '2.4.0' );
 
+	// Ponyfill for CSS var()s
+	wp_register_script( 'css-vars-ponyfill', get_template_directory_uri( ) . '/lib/css-vars-ponyfill.js', array( ), '2.4.7' );
+
 	// Javascript
-	wp_enqueue_script( get_template( ), get_template_directory_uri( ) . '/script.js', array( 'jquery', 'jquery-browser-mobile' ), $ver );
+	wp_enqueue_script( get_template( ), get_template_directory_uri( ) . '/script.js', array( 'jquery', 'jquery-browser-mobile', 'css-vars-ponyfill' ), $ver );
 
 	// Dynamic menu
 	wp_enqueue_script( get_template( ) . '-menu', get_template_directory_uri( ) . '/script-menu.js', array( 'jquery', 'jquery-waitforimages', 'wp-i18n' ), $ver );
