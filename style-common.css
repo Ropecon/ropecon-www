@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 1.4em;
 }
 
-h1 { font-size: 250%; }
+h1 { font-size: 200%; }
 h2 { font-size: 140%; }
 h3 { font-size: 130%; }
 h4 { font-size: 120%; }
@@ -67,6 +67,10 @@ footer section h2 {
 	font-size: 80%;
 	font-weight: 500;
 	text-transform: uppercase;
+}
+
+@media screen and (min-width:400px) {
+	h1 { font-size: 250%; }
 }
 
 @media screen and (min-width:768px) {
