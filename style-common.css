@@ -189,13 +189,27 @@ img {
 
 /*  Latest Posts  */
 
-.wp-block-latest-posts li {
-	background-color: #fff;
-	margin-bottom: 2em;
+.wp-block-latest-posts {
+	padding: 4em 0;
 }
-	.wp-block-latest-posts li:hover {
-		box-shadow: 0 0 2em 0 rgba(0,0,0,0.05);
+	.wp-block-latest-posts li {
+		background-color: var(--ropecon-background-highlight);
+		padding: 2em;
+		margin-bottom: 1em;
 	}
+		.wp-block-latest-posts li > a:first-child {
+			/* == h2 */
+			font-family: var(--ropecon-font-heading);
+			font-size: 140%;
+			font-weight: 700;
+		}
+
+		.wp-block-latest-posts li:hover {
+			box-shadow: 0 0 2em 0 rgba(0,0,0,0.05);
+		}
+			.wp-block-latest-posts__post-full-content > :last-child {
+				margin-bottom: 0;
+			}
 
 /*  Media & Text  */
 
