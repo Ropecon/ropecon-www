@@ -8,7 +8,7 @@ jQuery( function( e ) {
 		jQuery( 'header#header' ).toggleClass( 'open' );
 	} );
 
-	jQuery( window ).resize( update_dynamic_menu );
+	jQuery( window ).on( 'resize', update_dynamic_menu );
 	jQuery( 'header#header' ).waitForImages( update_dynamic_menu );
 
 	jQuery( 'header#header nav' ).removeClass( 'no-js' );
