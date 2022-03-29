@@ -65,7 +65,7 @@
 		<div id="title_main">
 			<h1 id="title">
 				<a href="<?php print home_url( '/' ); ?>">
-					<img src="<?php echo get_stylesheet_directory_uri( ); ?>/images/Ropecon_logo_white.png" alt="<?php bloginfo( 'name' ); ?>" />
+					<img src="<?php echo get_stylesheet_directory_uri( ); ?>/images/Ropecon_logo_white.png" alt="<?php bloginfo( 'name' ); ?>" loading="eager" />
 				</a>
 			</h1>
 		</div>
