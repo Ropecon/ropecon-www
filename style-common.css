@@ -75,6 +75,11 @@ footer section h2 {
 
 @media screen and (min-width:768px) {
 	h1 { font-size: 400%; }
+		.wp-block-media-text h1 { font-size: 275%; }
+}
+
+@media screen and (min-width:1200px) {
+	.wp-block-media-text h1 { font-size: 400px%; }
 }
 
 /*
@@ -244,6 +249,13 @@ img {
 			.wp-block-media-text .wp-block-media-text__content > :first-child { margin-top: 0; }
 			.wp-block-media-text .wp-block-media-text__content > :last-child { margin-bottom: 0; }
 
+#content > .wp-block-media-text:first-child .wp-block-media-text__content {
+	margin-top: 4em;
+}
+#content > :not([class*='wp-block']):first-child {
+	padding-top: 100px;
+}
+
 @media screen and (min-width: 768px) {
 	.wp-block-media-text {
 		grid-template-columns: repeat(2, 1fr) !important;
@@ -286,6 +298,10 @@ img {
 		.wp-block-media-text:nth-child(odd) .wp-block-media-text__media {
 			grid-column: 2 !important;
 		}
+
+	#content > .wp-block-media-text:first-child .wp-block-media-text__content {
+		margin-top: initial;
+	}
 }
 
 @media screen and (min-width:1280px) {
