@@ -8,7 +8,7 @@
  */
 
 .block-editor-block-list__layout {
-	font-family: Lora, Helvetica, Arial, sans-serif !important;
+	font-family: var(--ropecon-font) !important;
 	color: rgb(51,51,51);
 }
 	.editor-styles-wrapper .is-root-container h1,
@@ -19,7 +19,7 @@
 	.editor-styles-wrapper .is-root-container h6,
 	.editor-styles-wrapper .is-root-container .has-large-font-size {
 		font-weight: 700 !important;
-		font-family: Montserrat, Helvetica, Arial, sans-serif;
+		font-family: var(--ropecon-font-heading);
 	}
 
 	.editor-styles-wrapper .is-root-container h1 { font-size: 4em !important; }
@@ -145,7 +145,7 @@ h1.wp-block {
 	.editor-styles-wrapper th,
 	.editor-styles-wrapper thead td {
 		text-align: left;
-		font-family: Montserrat, Helvetica, Arial, sans-serif;
+		font-family: var(--ropecon-font-heading);
 		font-weight: 600;
 	}
 	.editor-styles-wrapper table thead {
