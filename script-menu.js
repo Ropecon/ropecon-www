@@ -37,18 +37,38 @@ jQuery( function( e ) {
 
 function update_dynamic_menu( ) {
 	var header = jQuery( 'header#header' );
-	var area = jQuery( 'header#header section.dynamic-width' );
+	var area = jQuery( 'header#header > section' );
+	var menu = jQuery( '#navi_main ul' );
 	var content_width = 0;
 
+	area.addClass( 'dynamic-width' );
 	header.removeClass( );
+	menu.find( 'li' ).addClass( 'visible' );
+
+	var max_width = header.width( ) - parseInt( area.css( 'padding-left' ) ) * 2;
+	var preferred_width = area.width( );
 
 	area.children( ).each( function( ) {
 		content_width += jQuery( this ).outerWidth( true );
 	} );
 
-	if( content_width <= area.width( ) ) {
+	if( content_width <= preferred_width ) {
 		header.addClass( 'full' );
+	} else if( content_width > preferred_width && content_width <= max_width ) {
+		header.addClass( 'full max' );
+		area.removeClass( 'dynamic-width' );
 	} else {
 		header.addClass( 'compact' );
+
+		jQuery.fn.reverse = [].reverse;
+		content_width += 60; // account for popup toggle
+		menu.find( 'li:not(.lang-item)' ).reverse( ).each( function( ) {
+			if( content_width > preferred_width ) {
+				content_width -= jQuery( this ).outerWidth( ) + 5;
+				jQuery( this ).removeClass( 'visible' );
+			} else {
+				return;
+			}
+		} );
 	}
 }

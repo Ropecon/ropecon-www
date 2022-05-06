@@ -49,8 +49,8 @@
 
 /*  Compact menu  */
 
-#header.compact nav ul.menu { display: none; }
-	#header.compact #title_main { margin-right: 0; }
+#header.compact nav ul.menu li { display: none; }
+#header.compact:not(.open) nav ul.menu li.visible { display: inline-block; }
 	#header.compact.open {
 		background-color: #232323;
 	}
@@ -59,7 +59,7 @@
 		position: absolute;
 		right: 0;
 		left: 0;
-
+		top: 65px;
 		border-top: 1px solid rgba(0,0,0,0.1);
 		background-color: #232323;
 		box-shadow: 0 0.3em 0.3em rgba(0,0,0,0.02);
@@ -100,9 +100,14 @@
 	background: transparent url(images/menu/menu_w.svg) 50% 50% no-repeat;
 	background-size: 24px 24px;
 }
-	#header.compact nav {
-		float: right;
+	#header:not(.open) section {
+		position: relative;
 	}
-		#header.compact nav .popup-toggle {
-			display: block;
+	#header.compact nav .popup-toggle {
+		position: absolute;
+		right: 30px;
+		display: block;
+	}
+		#header.compact.open nav .popup-toggle {
+			position: static;
 		}

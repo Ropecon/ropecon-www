@@ -8,6 +8,7 @@ body {
 }
 
 .dynamic-width,
+header.max section,
 #content > * {
 	padding-right: 30px;
 	padding-left: 30px;
