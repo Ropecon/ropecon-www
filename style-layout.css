@@ -30,7 +30,7 @@ header.max section,
 		#content > .alignfull + :not(div) {
 			margin-top: 3em;
 		}
-		#content :last-child:not(div) {
+		#content > :last-child:not(div) {
 			margin-bottom: 3em;
 		}
 
