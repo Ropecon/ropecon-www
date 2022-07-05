@@ -22,10 +22,17 @@ header.max section,
 	.dynamic-width,
 	#content > *,
 	#content > .alignfull > div[class*="__inner-container"] {
-		margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 		width: 80%;
 		max-width: 1200px;
 	}
+		#content > .alignfull + :not(div) {
+			margin-top: 3em;
+		}
+		#content :last-child:not(div) {
+			margin-bottom: 3em;
+		}
 
 	#content > .alignwide {
 		width: 90%;
