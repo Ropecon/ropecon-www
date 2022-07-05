@@ -89,6 +89,8 @@
 	}
 		#header.compact.open nav ul.menu > li {
 			margin-bottom: 1em;
+		}
+		#header.compact.open nav li {
 			white-space: normal;
 		}
 }
