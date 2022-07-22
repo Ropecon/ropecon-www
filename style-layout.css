@@ -14,8 +14,7 @@ header.max section,
 	padding-left: 30px;
 }
 	#content > .alignfull {
-		padding-top: 0;
-		padding-bottom: 0;
+		padding: 0;
 	}
 
 @media screen and (min-width: 1024px) {
