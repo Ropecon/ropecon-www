@@ -61,7 +61,6 @@ h3 { font-size: 130%; }
 h4 { font-size: 120%; }
 h5 { font-size: 110%; }
 h6 { font-size: 105%; }
-/* --> TODO */
 
 footer section h2 {
 	font-size: 80%;
@@ -79,7 +78,7 @@ footer section h2 {
 }
 
 @media screen and (min-width:1200px) {
-	.wp-block-media-text h1 { font-size: 400px%; }
+	.wp-block-media-text h1 { font-size: 400%; }
 }
 
 /*
@@ -130,6 +129,80 @@ img {
 		left: -1.7em;
 		width: 1em;
 	}
+
+/*
+ *  Tables
+ *
+ */
+
+table {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+	table thead {
+		display: none;
+		width: 100%;
+		margin-bottom: 1em;
+	}
+		table thead td, th {
+			text-align: left;
+			font-family: var(--ropecon-font-heading);
+			font-weight: 600;
+		}
+
+	table tr {
+		display: block;
+		width: 100%;
+		background-color: #fff;
+	}
+		table tr:not(:last-child) {
+			margin-bottom: 1em;
+		}
+			table th,
+			table td {
+				display: block;
+				width: 100%;
+
+				padding: 0.5em 0.9em;
+				border: 1px solid rgba(0,0,0,0.2);
+			}
+				table td::before {
+					display: inline-block;
+					font-size: 85%;
+					font-family: var(--ropecon-font-heading);
+					font-weight: 600;
+					content: attr(data-column-title);
+					margin-right: 1em;
+				}
+				table th:not(:first-child),
+				table td:not(:first-child) {
+					border-top: none;
+					padding-top: 0;
+				}
+				table th:not(:last-child),
+				table td:not(:last-child) {
+					border-bottom: none;
+					padding-bottom: 0.2em;
+				}
+
+@media screen and (min-width:640px) {
+	table thead {
+		display: table-header-group;
+	}
+	table tr {
+		display: table-row;
+	}
+		table th,
+		table td {
+			display: table-cell;
+			border: 1px solid rgba(0,0,0,0.2) !important;
+		}
+			table td::before {
+				display: none;
+			}
+}
+
 /*
  *  Gutenberg blocks
  *
@@ -397,21 +470,6 @@ img {
 	margin-top: 2em !important;
 	margin-bottom: 2em !important;
 }
-	table {
-		width: 100%;
-		table-layout: fixed;
-		background-color: #fff;
-	}
-		td, th {
-			padding: 0.5em 0.9em;
-			border: 1px solid rgba(0,0,0,0.2) !important;
-		}
-			thead td, th {
-				text-align: left;
-				font-family: var(--ropecon-font-heading);
-				font-weight: 600;
-			}
-
 
 /*
  *  Common classes

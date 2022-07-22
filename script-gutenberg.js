@@ -1,4 +1,4 @@
-__ = wp.i18n.__;
+var __ = wp.i18n.__;
 
 // Modify settings for core blocks
 

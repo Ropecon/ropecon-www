@@ -34,6 +34,16 @@ jQuery( function( e ) {
 	// Resize and scroll events
 	jQuery( window ).resize( resize_or_scroll ).scroll( resize_or_scroll );
 	resize_or_scroll( );
+
+	// Copy column headers to each td's attribute
+	jQuery( '.wp-block-table thead tr' ).each( function( e ) {
+		var table_body = jQuery( this ).closest( '.wp-block-table' ).find( 'tbody' );
+		jQuery( this ).children( 'th' ).each( function( e ) {
+			console.log( table_body );
+			child = e + 1;
+			table_body.find( 'td:nth-child(' + child + ')' ).attr( 'data-column-title', this.textContent );
+		} );
+	} );
 } );
 
 function resize_or_scroll( ) {
