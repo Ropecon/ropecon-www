@@ -70,5 +70,10 @@ function update_dynamic_menu( ) {
 				return;
 			}
 		} );
+		// language links should be the last ones to go...
+		if( content_width > preferred_width ) {
+			menu.find( 'li.lang-item' ).removeClass( 'visible' );
+		}
+
 	}
 }
