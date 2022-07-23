@@ -415,4 +415,13 @@ add_action( 'manage_media_custom_column', function( $column_name, $media_id ) {
 	}
 }, 10, 2 );
 
+/*
+ *  Remove inline styles (introduced in WP 6.0)
+ *
+ */
+
+remove_filter( 'render_block', 'wp_render_layout_support_flag', 10, 2 );
+remove_filter( 'render_block', 'gutenberg_render_layout_support_flag', 10, 2 );
+
+
 ?>
