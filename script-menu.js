@@ -14,7 +14,7 @@ jQuery( function( e ) {
 	jQuery( 'header#header nav' ).removeClass( 'no-js' );
 
 	jQuery( 'header#header nav.open-on-click li.menu-item-has-children' ).on( 'click', function( e ) {
-		if( !jQuery( this ).hasClass( 'open' ) && !jQuery( 'header#header' ).hasClass( 'compact' ) ) {
+		if( !jQuery( this ).hasClass( 'open' ) ) { // && !jQuery( 'header#header' ).hasClass( 'compact' ) ) {
 			jQuery( 'header#header nav li.menu-item-has-children.open' ).removeClass( 'open expand-left' );
 			jQuery( this ).addClass( 'open' );
 

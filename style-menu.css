@@ -2,12 +2,12 @@
 	display: none;
 }
 
-/*  Full menu  */
+/*  Dropdown menus  */
 
-#header.full nav .menu > li.menu-item-has-children {
+#header nav .menu > li.menu-item-has-children {
 	position: relative;
 }
-	#header.full nav .menu > li.menu-item-has-children::after {
+	#header:not(.open) nav .menu > li.menu-item-has-children::after {
 		position: absolute;
 		top: 0;
 		right: 0.1em;
@@ -18,39 +18,45 @@
 		background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAECAQAAADoz+32AAAAAnNCSVQICFXsRgQAAAAJcEhZcwAACCcAAAgnARf1jpAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAMElEQVQIHQXBwQmAMAAAsWwhFdsJnKvfgvvDmWg3gEZbo9NNV6cHzU5vpwlo9bXgB8QRFiNnK1XIAAAAAElFTkSuQmCC) 100% 50% no-repeat;
 	}
 
-#header.full nav ul.menu > li > .sub-menu {
+#header:not(.open) nav ul.menu > li > .sub-menu {
 	display: none;
 	position: absolute;
 	min-width: 16em;
 	background-color: #232323;
 }
-		#header.full nav.open-on-click li.menu-item-has-children.open > a,
-		#header.full nav.open-on-hover li.menu-item-has-children:hover > a,
-		#header.full nav.no-js li.menu-item-has-children:hover > a {
+		#header nav.open-on-click li.menu-item-has-children.open > a,
+		#header nav.open-on-hover li.menu-item-has-children:hover > a,
+		#header nav.no-js li.menu-item-has-children:hover > a {
 			z-index: 100;
 			position: relative;
 		}
-		#header.full nav.open-on-click li.menu-item-has-children.open ul.sub-menu,
-		#header.full nav.open-on-hover li.menu-item-has-children:hover ul.sub-menu,
-		#header.full nav.no-js li.menu-item-has-children:hover ul.sub-menu {
+		#header nav.open-on-click li.menu-item-has-children.open ul.sub-menu,
+		#header nav.open-on-hover li.menu-item-has-children:hover ul.sub-menu,
+		#header nav.no-js li.menu-item-has-children:hover ul.sub-menu {
 			display: block;
 		}
-			#header.full nav li.menu-item-has-children.open.expand-left ul.sub-menu {
+			#header nav li.menu-item-has-children.open.expand-left ul.sub-menu {
 				right: 0;
 			}
 
-#header.full nav .sub-menu li,
-#header.full nav .sub-menu li a {
+#header nav .sub-menu li,
+#header nav .sub-menu li a {
 	display: block;
 }
-	#header.full nav .sub-menu li a {
+	#header nav .sub-menu li a {
 		line-height: 36px;
 	}
 
+#header nav .sub-menu .sub-menu {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-left: 1.5em;
+}
+
 /*  Compact menu  */
 
-#header.compact nav ul.menu li { display: none; }
-#header.compact:not(.open) nav ul.menu li.visible { display: inline-block; }
+#header.compact nav ul.menu > li { display: none; }
+#header.compact:not(.open) nav ul.menu > li.visible { display: inline-block; }
 	#header.compact.open {
 		background-color: #232323;
 	}
@@ -69,7 +75,7 @@
 		#header.compact.open nav ul li,
 		#header.compact.open nav ul li a {
 			display: block;
-			font-size: 90%;
+			font-size: 90%; /* TODO: Every menu level gets smaller and smaller... */
 			line-height: 1.4em;
 		}
 			#header.compact.open nav ul li a {
