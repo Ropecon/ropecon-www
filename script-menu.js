@@ -42,7 +42,7 @@ function update_dynamic_menu( ) {
 	var content_width = 0;
 
 	area.addClass( 'dynamic-width' );
-	header.removeClass( );
+	header.removeClass( 'full max compact' );
 	menu.find( 'li' ).addClass( 'visible' );
 
 	var max_width = header.width( ) - parseInt( area.css( 'padding-left' ) ) * 2;
