@@ -38,7 +38,7 @@ jQuery( function( e ) {
 function update_dynamic_menu( ) {
 	var header = jQuery( 'header#header' );
 	var area = jQuery( 'header#header > section' );
-	var menu = jQuery( '#navi_main ul' );
+	var menu = jQuery( '#navi_main ul.menu' );
 	var content_width = 0;
 
 	area.addClass( 'dynamic-width' );
@@ -62,7 +62,7 @@ function update_dynamic_menu( ) {
 
 		jQuery.fn.reverse = [].reverse;
 		content_width += 60; // account for popup toggle
-		menu.find( 'li:not(.lang-item)' ).reverse( ).each( function( ) {
+		menu.children( 'li:not(.lang-item)' ).reverse( ).each( function( ) {
 			if( content_width > preferred_width ) {
 				content_width -= jQuery( this ).outerWidth( ) + 5;
 				jQuery( this ).removeClass( 'visible' );
@@ -72,7 +72,7 @@ function update_dynamic_menu( ) {
 		} );
 		// language links should be the last ones to go...
 		if( content_width > preferred_width ) {
-			menu.find( 'li.lang-item' ).removeClass( 'visible' );
+			menu.children( 'li.lang-item' ).removeClass( 'visible' );
 		}
 
 	}
