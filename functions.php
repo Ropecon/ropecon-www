@@ -139,7 +139,7 @@ function ropecon_google_fonts_init( ) {
 add_action( 'wp_enqueue_scripts', 'ropecon_styles_scripts' );
 
 function ropecon_styles_scripts( ) {
-	$ver = '20220723.1';
+	$ver = '20220723.2';
 
 	// Eric Meyer: CSS reset | http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
 	wp_enqueue_style( 'css-reset', get_template_directory_uri( ) . '/reset.css' );
