@@ -37,6 +37,7 @@ jQuery( function( e ) {
 
 	// Copy column headers to each td's attribute
 	jQuery( '.wp-block-table thead tr' ).each( function( e ) {
+		jQuery( this ).closest( 'table' ).addClass( 'has-column-titles' );
 		var table_body = jQuery( this ).closest( '.wp-block-table' ).find( 'tbody' );
 		jQuery( this ).children( 'th' ).each( function( e ) {
 			console.log( table_body );
