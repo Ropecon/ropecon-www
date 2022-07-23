@@ -204,7 +204,7 @@ table {
 			display: table-cell;
 			border: 1px solid rgba(0,0,0,0.2);
 		}
-			table td::before {
+			table.has-column-titles td::before {
 				display: none;
 			}
 }
