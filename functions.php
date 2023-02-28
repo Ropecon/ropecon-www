@@ -20,7 +20,6 @@ function ropecon_after_setup_theme( ) {
 	/*  Featured images  */
 	add_theme_support( 'post-thumbnails' );
 
-
 	/*  Excerpts for pages  */
 	add_post_type_support( 'page', 'excerpt' );
 
@@ -41,6 +40,9 @@ function ropecon_after_setup_theme( ) {
 	register_nav_menus( array(
 		'navi_main' => __( 'Main navigation', 'ropecon' )
 	) );
+
+	/*  Settings  */
+	add_settings_section( 'general', _x( 'General', 'settings section title', 'ropecon' ), null, 'ropecon' );
 
 	/*  Custom color palette  */
 	add_theme_support( 'editor-color-palette', array(
@@ -77,10 +79,29 @@ function ropecon_after_setup_theme( ) {
  *
  */
 
+add_action( 'admin_menu', function( ) {
+	add_submenu_page( 'options-general.php', __( 'Settings for Ropecon', 'ropecon' ), 'Ropecon', 'manage_options', 'ropecon', 'ropecon_settings_page' );
+} );
+
+function ropecon_settings_page( ) {
+	?>
+		<div class="wrap">
+			<form action="options.php" method="POST">
+			<h1><?php _e( 'Settings for Ropecon', 'ropecon' ); ?></h1>
+			<?php
+				settings_fields( 'ropecon' );
+				do_settings_sections( 'ropecon' );
+				submit_button( __( 'Save Changes', 'ropecon' ) );
+			?>
+			</form>
+		</div>
+	<?php
+}
+
 add_action( 'admin_init', function( ) {
-	/*  Settings  */
+	/*  404 page  */
 	register_setting(
-		'reading',
+		'ropecon',
 		'ropecon_404_page',
 		array(
 			'type' => 'integer',
@@ -94,7 +115,8 @@ add_action( 'admin_init', function( ) {
 		'ropecon_404_page',
 		__( '404 Error Page', 'ropecon' ),
 		'ropecon_404_page_field',
-		'reading',
+		'ropecon',
+		'general'
 	);
 } );
 
