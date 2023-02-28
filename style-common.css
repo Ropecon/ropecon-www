@@ -287,12 +287,12 @@ table {
 		margin: 3em 0;
 	}
 
-	.wp-block-cover h1,
-	.wp-block-cover h2,
-	.wp-block-cover h3,
-	.wp-block-cover h4,
-	.wp-block-cover h5,
-	.wp-block-cover h6 {
+	.wp-block-cover h1:not(.is-style-no-shadow),
+	.wp-block-cover h2:not(.is-style-no-shadow),
+	.wp-block-cover h3:not(.is-style-no-shadow),
+	.wp-block-cover h4:not(.is-style-no-shadow),
+	.wp-block-cover h5:not(.is-style-no-shadow),
+	.wp-block-cover h6:not(.is-style-no-shadow) {
 		text-shadow: 2px 2px 0 rgba(0,0,0,1);
 	}
 
