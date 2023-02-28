@@ -10,7 +10,7 @@
 
 	<div id="copyright">
 		<div class="dynamic-width container">
-			<p>© Ropecon 2022 | Palvelintilan tarjoaa Säätöyhteisö B2 ry | Kuvat Marko Saari, Sami Eräluoto, MiiaLiina, Tuomas Puikkonen ja Mikael Peltomaa | Sivusto käyttää evästeitä</p>
+			<p><?php echo get_option( 'ropecon_footer_copy' ); ?> | Sivusto käyttää evästeitä</p>
 		</div>
 	</div>
 

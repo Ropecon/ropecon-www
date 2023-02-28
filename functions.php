@@ -118,6 +118,30 @@ add_action( 'admin_init', function( ) {
 		'ropecon',
 		'general'
 	);
+
+	/*  Footer content  */
+	register_setting(
+		'ropecon',
+		'ropecon_footer_copy',
+		array(
+			'type' => 'string',
+			'description' => __( 'Footer Copyright Content', 'ropecon' ),
+			'sanitize_callback' => 'sanitize_text_field',
+			'default' => ''
+		)
+	);
+
+	add_settings_field(
+		'ropecon_footer_copy',
+		__( 'Footer Copyright Content', 'ropecon' ),
+		'ropecon_text_field',
+		'ropecon',
+		'general',
+		array( 'key' => 'ropecon_footer_copy' )
+	);
+
+	pll_register_string( 'ropecon_footer_copy', get_option( 'ropecon_footer_copy' ), 'Ropecon', false );
+
 } );
 
 function ropecon_sanitize_page( $input ) {
@@ -134,6 +158,11 @@ function ropecon_404_page_field( ) {
 		'show_option_none' => __( '-- Use built-in --', 'ropecon' ),
 		'option_none_value' => 0
 	) );
+}
+
+function ropecon_text_field( $args ) {
+	$value = get_option( $args['key'] );
+	echo '<input type="text" class="widefat" name="' . $args['key'] . '" value="' . $value . '" />';
 }
 
 add_filter( 'display_post_states', function( $states, $post ) {
