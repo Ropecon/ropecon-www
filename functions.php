@@ -41,9 +41,6 @@ function ropecon_after_setup_theme( ) {
 		'navi_main' => __( 'Main navigation', 'ropecon' )
 	) );
 
-	/*  Settings  */
-	add_settings_section( 'general', _x( 'General', 'settings section title', 'ropecon' ), null, 'ropecon' );
-
 	/*  Custom color palette  */
 	add_theme_support( 'editor-color-palette', array(
 		array(
@@ -108,6 +105,9 @@ function ropecon_settings_page( ) {
 }
 
 add_action( 'admin_init', function( ) {
+	/*  Settings section  */
+	add_settings_section( 'general', _x( 'General', 'settings section title', 'ropecon' ), null, 'ropecon' );
+
 	/*  404 page  */
 	register_setting(
 		'ropecon',
