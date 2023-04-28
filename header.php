@@ -7,7 +7,7 @@
 	<meta name="copyright" content="&copy; Ropecon" />
 	<meta name="description" content="<?php ropecon_description( true ); ?>" />
 
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri( ); ?>/images/ropecon_icon.png">
+	<?php get_template_part( 'tpl/favicon' ); ?>
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1" />
 
 	<?php wp_head( ); ?>
@@ -20,7 +20,7 @@
 		<div id="title_main">
 			<h1 id="title">
 				<a href="<?php print home_url( '/' ); ?>">
-					<img src="<?php echo get_stylesheet_directory_uri( ); ?>/images/Ropecon_logo_white.png" alt="<?php bloginfo( 'name' ); ?>" loading="eager" />
+					<?php get_template_part( 'tpl/logo' ); ?>
 				</a>
 			</h1>
 		</div>
