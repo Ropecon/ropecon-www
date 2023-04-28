@@ -44,7 +44,7 @@ Teemassa on joitain lohkomalleja, joita voi käyttää uusien sivujen ulkoasun r
 
 ### Lohkon näyttöasetukset, mm. ajastus
 
-Sivustolle on asennettu lisäosa *Block Visibility*, jolla lohkoja voidaan näyttää tiettyyn aikaan, vain tietyille kävijärooleille tai vain tietyille laitteille. Näkyvyysvalinnat löytyy lohkon sivupalkin *Visibility* -osiosta.
+Sivustolle on asennettu lisäosa [Block Visibility](https://fi.wordpress.org/plugins/block-visibility/), jolla lohkoja voidaan näyttää tiettyyn aikaan, vain tietyille kävijärooleille tai vain tietyille laitteille. Näkyvyysvalinnat löytyy lohkon sivupalkin *Visibility* -osiosta.
 
 Lohkojen näkyminen voidaan esimerkiksi ajastaa alkamaan ja päättymään automaattisesti tiettyyn aikaan.
 
@@ -57,3 +57,7 @@ Tekijänoikeustiedot tulee tallentaa kuvan *Kuvaus*-kenttään WordPressin media
 ### Väripaletti
 
 Teeman väripalettiin on lisätty värejä, joita käytetään laajasti sivustolla. Yksi näistä väreistä on korostusväri (*Ropecon korostusväri #1*), joka voidaan vaihtaa ohjelmallisesti esimerkiksi uuden tapahtumateeman julkaisun yhteydessä.
+
+### Vuosiarkistokopiot
+
+Verkkosivuston vuosiarkistokopion voi tehdä [Simply Static](https://fi.wordpress.org/plugins/simply-static/) -lisäosalla. Lisäosan asetuksista tulee valita käyttöön suhteelliset osoitteet (relative URLs), jolloin lisäosa luo minkä tahansa verkko-osoitteen juuressa toimivan staattisen kopion.
