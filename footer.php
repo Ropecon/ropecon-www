@@ -4,6 +4,9 @@
 				dynamic_sidebar( 'footer_widgets' );
 			} ?>
 		</section>
+		<nav class="dynamic-width container">
+			<?php wp_nav_menu( array( 'theme_location' => 'navi_main', 'fallback_cb' => false ) ); ?>
+		</nav>
 
 		<?php wp_footer( ); ?>
 	</footer>

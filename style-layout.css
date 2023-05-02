@@ -160,43 +160,58 @@ footer,
 		footer .dynamic-width {
 			width: 100%;
 		}
-			footer .menu a, footer .menu a:link, footer .menu a:visited {
-				color: #fff;
+
+		/*  Menu  */
+		footer nav {
+			margin-top: 4em;
+		}
+			footer nav ul.menu {
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-gap: 1em;
 			}
 				footer .menu a, footer .menu a:link, footer .menu a:visited {
-					display: block;
-					opacity: 0.5;
+					color: #fff;
 				}
-					footer ul.sub-menu {
-						margin-left: 2em;
-						margin-bottom: 0;
+					footer .menu a, footer .menu a:link, footer .menu a:visited {
+						display: block;
+						opacity: 0.5;
 					}
+						footer ul.sub-menu {
+							margin-left: 2em;
+							margin-bottom: 0;
+						}
 
 @media screen and (min-width: 600px) {
-	footer .dynamic-width {
+	footer section.dynamic-width {
 		display: grid;
 		grid-template-columns: repeat(2,1fr);
-		grid-template-rows: auto 90px auto;
 		grid-gap: 2em 4em;
-
-		grid-template-areas: "one one" "two three" "two four";
 	}
-		footer .dynamic-width :nth-child(1) { grid-area: one; }
-		footer .dynamic-width :nth-child(2) { grid-area: two; }
-		footer .dynamic-width :nth-child(3) { grid-area: four; }
-		footer .dynamic-width :nth-child(4) { grid-area: three; }
 
+	footer nav ul.menu {
+		grid-gap: 2em;
+		grid-template-columns: repeat(2,1fr);
+	}
+}
+
+@media screen and (min-width: 850px) {
+	footer nav ul.menu {
+		grid-template-columns: repeat(3,1fr);
+	}
 }
 
 @media screen and (min-width: 1024px) {
-	footer .dynamic-width {
+	footer section.dynamic-width {
 		grid-template-columns: repeat(4,1fr);
-		grid-template-areas: "one two three four";
+	}
+	footer nav ul.menu {
+		grid-template-columns: repeat(4,1fr);
 	}
 }
 
-	#copyright {
-		background-color: #1e1e1e;
-		color: rgba(245,245,245,0.5);
-		font-size: 80%;
-	}
+#copyright {
+	background-color: #1e1e1e;
+	color: rgba(245,245,245,0.5);
+	font-size: 80%;
+}
