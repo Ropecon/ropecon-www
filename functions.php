@@ -149,8 +149,9 @@ add_action( 'admin_init', function( ) {
 		array( 'key' => 'ropecon_footer_copy' )
 	);
 
-	pll_register_string( 'ropecon_footer_copy', get_option( 'ropecon_footer_copy' ), 'Ropecon', false );
-
+	if( function_exists( 'pll_register_string' ) ) {
+		pll_register_string( 'ropecon_footer_copy', get_option( 'ropecon_footer_copy' ), 'Ropecon', false );
+	}
 } );
 
 function ropecon_sanitize_page( $input ) {
