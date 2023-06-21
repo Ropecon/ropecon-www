@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-02-28T12:28:23+02:00\n"
+"POT-Creation-Date: 2023-06-21T20:39:25+03:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: ropecon\n"
@@ -42,77 +42,72 @@ msgstr ""
 msgid "Main navigation"
 msgstr ""
 
-#: functions.php:45
+#: functions.php:47
+msgid "Black"
+msgstr ""
+
+#: functions.php:52
+msgid "Dark Gray"
+msgstr ""
+
+#: functions.php:57
+msgid "Light Gray"
+msgstr ""
+
+#: functions.php:62
+msgid "White"
+msgstr ""
+
+#: functions.php:67
+msgid "Ropecon Highlight #1"
+msgstr ""
+
+#: functions.php:80
+#: functions.php:87
+msgid "Settings for Ropecon"
+msgstr ""
+
+#: functions.php:91
+msgid "Save Changes"
+msgstr ""
+
+#: functions.php:100
 msgctxt "settings section title"
 msgid "General"
 msgstr ""
 
-#: functions.php:50
-msgid "Black"
-msgstr ""
-
-#: functions.php:55
-msgid "Dark Gray"
-msgstr ""
-
-#: functions.php:60
-msgid "Light Gray"
-msgstr ""
-
-#: functions.php:65
-msgid "White"
-msgstr ""
-
-#: functions.php:70
-msgid "Ropecon Highlight #1"
-msgstr ""
-
-#: functions.php:81
-msgctxt "block style name"
-msgid "No Shadow"
-msgstr ""
-
-#: functions.php:92
-#: functions.php:99
-msgid "Settings for Ropecon"
-msgstr ""
-
-#: functions.php:103
-msgid "Save Changes"
-msgstr ""
-
-#: functions.php:117
-#: functions.php:125
-#: functions.php:180
+#: functions.php:108
+#: functions.php:116
+#: functions.php:172
 msgid "404 Error Page"
 msgstr ""
 
-#: functions.php:137
-#: functions.php:145
+#: functions.php:128
+#: functions.php:136
 msgid "Footer Copyright Content"
 msgstr ""
 
-#: functions.php:167
+#: functions.php:159
 msgid "-- Use built-in --"
 msgstr ""
 
-#: functions.php:397
+#: functions.php:389
 msgid "Title cover"
 msgstr ""
 
-#: functions.php:398
+#: functions.php:390
 msgid "Centered title on top of image."
 msgstr ""
 
-#: functions.php:401
+#: functions.php:393
 msgid "Three icon columns"
 msgstr ""
 
-#: functions.php:402
+#: functions.php:394
 msgid "Three columns with icons and varying background colors."
 msgstr ""
 
-#: functions.php:466
+#: functions.php:458
 msgid "Description"
 msgstr ""
 
@@ -137,6 +132,7 @@ msgstr ""
 #: script-gutenberg.js:47
 #: script-gutenberg.js:63
 #: script-gutenberg.js:79
+#: script-gutenberg.js:95
 msgid "Default"
 msgstr ""
 
@@ -149,10 +145,14 @@ msgid "Full height"
 msgstr ""
 
 #: script-gutenberg.js:68
-msgid "Text overlaying image"
+msgid "Shadow"
 msgstr ""
 
 #: script-gutenberg.js:84
+msgid "Text overlaying image"
+msgstr ""
+
+#: script-gutenberg.js:100
 msgid "Currency"
 msgstr ""
 

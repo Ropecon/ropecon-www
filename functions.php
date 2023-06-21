@@ -69,15 +69,6 @@ function ropecon_after_setup_theme( ) {
 			'color' => '#5472d2'
 		),
 	) );
-
-	/*  Block styles  */
-	register_block_style(
-		'core/heading',
-		array(
-			'name' => 'no-shadow',
-			'label' => _x( 'No Shadow', 'block style name', 'ropecon' ),
-		)
-	);
 }
 
 /*

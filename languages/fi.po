@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ropecon website\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ropecon.fi-theme\n"
-"POT-Creation-Date: 2023-02-28T12:28:23+02:00\n"
-"PO-Revision-Date: 2023-02-28 12:28+0200\n"
+"POT-Creation-Date: 2023-06-21T20:39:25+03:00\n"
+"PO-Revision-Date: 2023-06-21 20:39+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -44,73 +44,68 @@ msgstr "Alaviitteen vimpaimet"
 msgid "Main navigation"
 msgstr "Päänavigaatio"
 
-#: functions.php:45
+#: functions.php:47
+msgid "Black"
+msgstr "Musta"
+
+#: functions.php:52
+msgid "Dark Gray"
+msgstr "Tummanharmaa"
+
+#: functions.php:57
+msgid "Light Gray"
+msgstr "Vaaleanharmaa"
+
+#: functions.php:62
+msgid "White"
+msgstr "Valkoinen"
+
+#: functions.php:67
+msgid "Ropecon Highlight #1"
+msgstr "Ropecon korostusväri #1"
+
+#: functions.php:80 functions.php:87
+msgid "Settings for Ropecon"
+msgstr "Asetukset Ropeconille"
+
+#: functions.php:91
+msgid "Save Changes"
+msgstr "Tallenna muutokset"
+
+#: functions.php:100
 msgctxt "settings section title"
 msgid "General"
 msgstr "Yleinen"
 
-#: functions.php:50
-msgid "Black"
-msgstr "Musta"
-
-#: functions.php:55
-msgid "Dark Gray"
-msgstr "Tummanharmaa"
-
-#: functions.php:60
-msgid "Light Gray"
-msgstr "Vaaleanharmaa"
-
-#: functions.php:65
-msgid "White"
-msgstr "Valkoinen"
-
-#: functions.php:70
-msgid "Ropecon Highlight #1"
-msgstr "Ropecon korostusväri #1"
-
-#: functions.php:81
-msgctxt "block style name"
-msgid "No Shadow"
-msgstr "Ei varjoa"
-
-#: functions.php:92 functions.php:99
-msgid "Settings for Ropecon"
-msgstr "Asetukset Ropeconille"
-
-#: functions.php:103
-msgid "Save Changes"
-msgstr "Tallenna muutokset"
-
-#: functions.php:117 functions.php:125 functions.php:180
+#: functions.php:108 functions.php:116 functions.php:172
 msgid "404 Error Page"
 msgstr "404 -virhesivu"
 
-#: functions.php:137 functions.php:145
+#: functions.php:128 functions.php:136
 msgid "Footer Copyright Content"
 msgstr "Alaviitteen tekijänoikeussisältö"
 
-#: functions.php:167
+#: functions.php:159
 msgid "-- Use built-in --"
 msgstr "-- Käytä sisäänrakennettua --"
 
-#: functions.php:397
+#: functions.php:389
 msgid "Title cover"
 msgstr "Otsikkokansi"
 
-#: functions.php:398
+#: functions.php:390
 msgid "Centered title on top of image."
 msgstr "Keskitetty otsikko kuvan päällä."
 
-#: functions.php:401
+#: functions.php:393
 msgid "Three icon columns"
 msgstr "Kolme kuvakesaraketta"
 
-#: functions.php:402
+#: functions.php:394
 msgid "Three columns with icons and varying background colors."
 msgstr "Kolme saraketta kuvakkeilla ja erivärisillä taustoilla."
 
-#: functions.php:466
+#: functions.php:458
 msgid "Description"
 msgstr "Kuvaus"
 
@@ -131,7 +126,7 @@ msgid "Icon Name"
 msgstr "Kuvakkeen nimi"
 
 #: script-gutenberg.js:31 script-gutenberg.js:47 script-gutenberg.js:63
-#: script-gutenberg.js:79
+#: script-gutenberg.js:79 script-gutenberg.js:95
 msgid "Default"
 msgstr "Oletus"
 
@@ -144,10 +139,14 @@ msgid "Full height"
 msgstr "Täyskorkeus"
 
 #: script-gutenberg.js:68
+msgid "Shadow"
+msgstr "Varjo"
+
+#: script-gutenberg.js:84
 msgid "Text overlaying image"
 msgstr "Teksti kuvan päällä"
 
-#: script-gutenberg.js:84
+#: script-gutenberg.js:100
 msgid "Currency"
 msgstr "Valuutta"
 

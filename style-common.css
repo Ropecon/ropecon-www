@@ -81,6 +81,16 @@ footer section h2 {
 	.wp-block-media-text h1 { font-size: 400%; }
 }
 
+.wp-block-cover h1.is-style-shadow,
+.wp-block-cover h2.is-style-shadow,
+.wp-block-cover h3.is-style-shadow,
+.wp-block-cover h4.is-style-shadow,
+.wp-block-cover h5.is-style-shadow,
+.wp-block-cover h6.is-style-shadow {
+	text-shadow: 2px 2px 0 rgba(0,0,0,1);
+}
+
+
 /*
  *  Paragraphs
  *
@@ -296,7 +306,7 @@ table {
 	.wp-block-cover h4:not(.is-style-no-shadow),
 	.wp-block-cover h5:not(.is-style-no-shadow),
 	.wp-block-cover h6:not(.is-style-no-shadow) {
-		text-shadow: 2px 2px 0 rgba(0,0,0,1);
+/*		text-shadow: 2px 2px 0 rgba(0,0,0,1); */
 	}
 
 /*  Group  */

@@ -54,6 +54,22 @@ wp.domReady( function( ) {
 		]
 	);
 
+   // Heading
+   wp.blocks.registerBlockStyle(
+      'core/heading',
+      [
+         {
+            name: 'default',
+            label: __( 'Default', 'ropecon' ),
+            isDefault: true
+         },
+         {
+            name: 'shadow',
+            label: __( 'Shadow', 'ropecon' ),
+         }
+      ]
+   );
+
 	// Media & Text
 	wp.blocks.registerBlockStyle(
 		'core/media-text',
