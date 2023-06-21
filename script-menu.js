@@ -30,6 +30,7 @@ jQuery( function( e ) {
 	jQuery( window ).click( function( e ) {
 		if( !jQuery( e.target ).closest( 'li.menu-item-has-children' ).hasClass( 'open' ) ) {
 			jQuery( 'li.menu-item-has-children.open' ).removeClass( 'open' );
+			update_dynamic_menu( );
 		}
 	} );
 } );
