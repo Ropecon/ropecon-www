@@ -422,7 +422,7 @@ function ropecon_render_block_image_information( $content, $block ) {
 	}
 
 	if( $block['blockName'] == 'core/cover' ) {
-		if( $block['attrs']['url'] ) {
+		if( isset( $block['attrs']['url'] ) ) {
 			$media = $block['attrs']['id'];
 		}
 	}
