@@ -1,7 +1,11 @@
 var __ = wp.i18n.__;
+var old_viewport_width = 0;
 
 jQuery( function( e ) {
-	var popup_link = jQuery( '<a href="#" class="popup-toggle" title="' + __( 'Toggle menu', 'ropecon' ) + '"></a>' );
+	var popup_link = jQuery( '<a href="" class="popup-toggle" title="' + __( 'Toggle menu', 'ropecon' ) + '"></a>' );
+	jQuery( 'header#header' ).on( 'click', '.popup-toggle', function( e ) {
+		e.preventDefault( );
+	} );
 	popup_link.prependTo( 'header#header nav' );
 
 	jQuery( 'header#header .popup-toggle' ).click( function( e ) {
@@ -37,6 +41,14 @@ jQuery( function( e ) {
 
 
 function update_dynamic_menu( ) {
+	if( old_viewport_width == 0 ) {
+		old_viewport_width = jQuery( window ).width( );
+	} else if( old_viewport_width == jQuery( window ).width( ) ) {
+		return;
+	} else {
+		old_viewport_width = jQuery( window ).width( );
+	}
+
 	var header = jQuery( 'header#header' );
 	var area = jQuery( 'header#header > section' );
 	var menu = jQuery( '#navi_main ul.menu' );
