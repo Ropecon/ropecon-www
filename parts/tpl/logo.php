@@ -1,1 +1,1 @@
-					<img src="<?php echo get_template_directory_uri( ); ?>/images/Ropecon_logo_white.png" alt="<?php bloginfo( 'name' ); ?>" loading="eager" />
+					<img src="<?php echo get_template_directory_uri( ); ?>/images/ropecon/ropecon_logo_white.svg" alt="<?php bloginfo( 'name' ); ?>" loading="eager" />

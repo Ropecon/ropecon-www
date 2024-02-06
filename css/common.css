@@ -126,7 +126,7 @@ img {
 		position: absolute;
 		left: -1.7em;
 		top: 0.15em;
-		background-image: url(images/ropecon_icon.png);
+		background-image: url(images/ropecon/ropecon_icon_black.svg);
 		background-repeat: no-repeat;
 		background-size: contain;
 		width: 1em;
@@ -564,7 +564,7 @@ p[class^="icon-"], p[class*=" icon-"] {
 		content: " ";
 		display: block;
 		height: 48px;
-		background-image: url(images/ropecon_icon.png);
+		background-image: url(images/ropecon/ropecon_icon_black.svg);
 		background-size: 48px;
 		background-repeat: no-repeat;
 		background-position: 50% 0;
@@ -655,7 +655,7 @@ div.kompassi-filter-note::before {
 }
 
 :root {
-	--kompassi-program-icon-default: url(https://wp.ropecon.fi/wp-content/themes/ropecon/images/ropecon_icon_white.svg);
+	--kompassi-program-icon-default: url(https://wp.ropecon.fi/wp-content/themes/ropecon/images/ropecon/ropecon_icon_white.svg);
 	--kompassi-button-bg-active: var(--ropecon-highlight-one);
 }
 
