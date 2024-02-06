@@ -639,3 +639,32 @@ p[class^="icon-"], p[class*=" icon-"] {
 			text-align: right;
 		}
 }
+
+/*
+ *  Kompassi Integration
+ *
+ */
+
+div.kompassi-filter-note::before {
+ 	font-family: 'icomoon';
+ 	content: "\e9e6";
+	color: rgba(105,105,54,1);
+	margin-right: 0.5em;
+	font-size: 1.2em;
+	vertical-align: middle;
+}
+
+:root {
+	--kompassi-program-icon-default: url(https://wp.ropecon.fi/wp-content/themes/ropecon/images/ropecon_icon_white.svg);
+	--kompassi-button-bg-active: var(--ropecon-highlight-one);
+}
+
+.dimension { --dimension-bg-color: var(--kompassi-color-blue-mid); }
+.dimension:is(.mode,.subject,.participation) { --dimension-bg-color: var(--kompassi-color-blue-dark); }
+.dimension.accessibility { --dimension-bg-color: var(--kompassi-color-red); }
+
+#kompassi_schedule_toolbar :is([class*="toggle"], #kompassi_schedule_display) {
+	font-family: var(--ropecon-font-heading);
+	font-weight: 500;
+	font-size: 90%;
+}
