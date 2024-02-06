@@ -38,7 +38,8 @@ function ropecon_after_setup_theme( ) {
 
 	/*  Menus  */
 	register_nav_menus( array(
-		'navi_main' => __( 'Main navigation', 'ropecon' )
+		'navi_main' => __( 'Main navigation', 'ropecon' ),
+		'navi_guide' => __( 'Guide navigation', 'ropecon' )
 	) );
 
 	/*  Custom color palette  */
@@ -69,6 +70,24 @@ function ropecon_after_setup_theme( ) {
 			'color' => '#5472d2'
 		),
 	) );
+}
+
+/*
+ *  Register a dashboard widget
+ *
+ */
+
+add_action( 'wp_dashboard_setup', function( ) {
+	wp_add_dashboard_widget( 'ropecon_theme', __( 'Ropecon theme', 'ropecon' ), 'ropecon_theme_dashboard_widget', null, null, null, 'high' );
+} );
+
+function ropecon_theme_dashboard_widget( ) {
+	echo '<p><a class="button button-primary" href="https://github.com/Ropecon/ropecon-www/tree/main/guide">' . __( 'Quick Guide', 'ropecon' ) . '</a></p>';
+	echo '<p><a class="button" href="https://github.com/Ropecon/ropecon-www/issues">' . __( 'Open Issues', 'ropecon' ) . '</a> ';
+	echo '<a class="button" href="https://github.com/Ropecon/ropecon-www/issues/new">' . __( 'File New Issue', 'ropecon' ) . '</a></p>';
+	$channel = '<code>#nettisivutekniikka</code>';
+	# translators: Slack channel name
+	echo '<p>' . __( 'Still need help or have other questions?', 'ropecon' ) . ' ' . sprintf( __( 'Find us on the Ropecon Slack on %s', 'ropecon' ), $channel ) . '</p>';
 }
 
 /*
@@ -196,7 +215,6 @@ function ropecon_styles_scripts( ) {
 	// Eric Meyer: CSS reset | http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
 	wp_enqueue_style( 'css-reset', get_template_directory_uri( ) . '/reset.css' );
 
-
 	// Main style sheets
 	wp_enqueue_style( get_template( ), get_template_directory_uri( ) . '/style.css', array( 'css-reset' ), $ver );
 	wp_enqueue_style( get_template( ) . '-layout', get_template_directory_uri( ) . '/style-layout.css', array( get_template( ) ), $ver );
@@ -223,6 +241,17 @@ function ropecon_styles_scripts( ) {
 
 	wp_enqueue_style( get_template( ) . '-menu', get_template_directory_uri( ) . '/style-menu.css', array( get_template( ) ), $ver );
 }
+
+add_action( 'admin_enqueue_scripts', 'ropecon_admin_styles_scripts' );
+
+function ropecon_admin_styles_scripts( ) {
+	$ver = '20240206.0';
+	// Admin stylesheets
+	if( is_admin( ) ) {
+		wp_enqueue_style( get_template( ) . '-admin', get_template_directory_uri( ) . '/css/admin.css', $ver );
+	}
+}
+
 
 /**
  *  Add functions for custom title and description output

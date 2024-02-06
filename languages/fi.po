@@ -3,9 +3,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Ropecon website\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/ropecon.fi-theme\n"
-"POT-Creation-Date: 2023-06-21T20:39:25+03:00\n"
-"PO-Revision-Date: 2023-06-21 20:39+0300\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wp.ropecon.fi-"
+"theme\n"
+"POT-Creation-Date: 2024-02-06T23:52:07+02:00\n"
+"PO-Revision-Date: 2024-02-06 23:53+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -44,68 +45,98 @@ msgstr "Alaviitteen vimpaimet"
 msgid "Main navigation"
 msgstr "Päänavigaatio"
 
-#: functions.php:47
+#: functions.php:42
+msgid "Guide navigation"
+msgstr "Oppaan navigaatio"
+
+#: functions.php:48
 msgid "Black"
 msgstr "Musta"
 
-#: functions.php:52
+#: functions.php:53
 msgid "Dark Gray"
 msgstr "Tummanharmaa"
 
-#: functions.php:57
+#: functions.php:58
 msgid "Light Gray"
 msgstr "Vaaleanharmaa"
 
-#: functions.php:62
+#: functions.php:63
 msgid "White"
 msgstr "Valkoinen"
 
-#: functions.php:67
+#: functions.php:68
 msgid "Ropecon Highlight #1"
 msgstr "Ropecon korostusväri #1"
 
-#: functions.php:80 functions.php:87
+#: functions.php:81
+msgid "Ropecon theme"
+msgstr "Ropecon-teema"
+
+#: functions.php:85
+msgid "Quick Guide"
+msgstr "Pikaopas"
+
+#: functions.php:86
+msgid "Open Issues"
+msgstr "Avoimet ongelmat"
+
+#: functions.php:87
+msgid "File New Issue"
+msgstr "Ilmoita ongelmasta"
+
+#. translators: Slack channel name
+#: functions.php:90
+msgid "Still need help or have other questions?"
+msgstr "Tarvitsetko vielä apua tai onko sinulla muuta kysyttävää?"
+
+#. translators: Slack channel name
+#: functions.php:90
+msgid "Find us on the Ropecon Slack on %s"
+msgstr "Löydät meidät Ropeconin Slackista kanavalta %s"
+
+#: functions.php:99 functions.php:106
 msgid "Settings for Ropecon"
 msgstr "Asetukset Ropeconille"
 
-#: functions.php:91
+#: functions.php:110
 msgid "Save Changes"
 msgstr "Tallenna muutokset"
 
-#: functions.php:100
+#: functions.php:119
 msgctxt "settings section title"
 msgid "General"
 msgstr "Yleinen"
 
-#: functions.php:108 functions.php:116 functions.php:172
+#: functions.php:127 functions.php:135 functions.php:191
 msgid "404 Error Page"
 msgstr "404 -virhesivu"
 
-#: functions.php:128 functions.php:136
+#: functions.php:147 functions.php:155
 msgid "Footer Copyright Content"
 msgstr "Alaviitteen tekijänoikeussisältö"
 
-#: functions.php:159
+#: functions.php:178
 msgid "-- Use built-in --"
 msgstr "-- Käytä sisäänrakennettua --"
 
-#: functions.php:389
+#: functions.php:421
 msgid "Title cover"
 msgstr "Otsikkokansi"
 
-#: functions.php:390
+#: functions.php:422
 msgid "Centered title on top of image."
 msgstr "Keskitetty otsikko kuvan päällä."
 
-#: functions.php:393
+#: functions.php:425
 msgid "Three icon columns"
 msgstr "Kolme kuvakesaraketta"
 
-#: functions.php:394
+#: functions.php:426
 msgid "Three columns with icons and varying background colors."
 msgstr "Kolme saraketta kuvakkeilla ja erivärisillä taustoilla."
 
-#: functions.php:458
+#: functions.php:493
 msgid "Description"
 msgstr "Kuvaus"
 
@@ -150,7 +181,7 @@ msgstr "Teksti kuvan päällä"
 msgid "Currency"
 msgstr "Valuutta"
 
-#: script-menu.js:4
+#: script-menu.js:5
 msgid "Toggle menu"
 msgstr "Valikko päälle/pois"
 

@@ -1,0 +1,27 @@
+.postbox#ropecon_theme .inside {
+   position: relative;
+   min-height: calc( 100px + 1em );
+   padding-right: 110px;
+}
+.postbox#ropecon_theme .inside::before {
+   content: '';
+   position: absolute;
+   display: block;
+   top: 0.5em;
+   left: 0;
+   right: 0.5em;
+   bottom: 0;
+   background-image: url("../images/ropecon_icon.png");
+   background-repeat: no-repeat;
+   background-position: 100% 0;
+   background-size: auto 100px;
+}
+
+.postbox#ropecon_theme .inside p {
+   position: relative;
+   z-index: 2;
+   margin-bottom: 0.5em;
+}
+.postbox#ropecon_theme .inside p + p {
+   margin-top: 0.5em;
+}
