@@ -213,7 +213,7 @@ h1.wp-block {
 	content: " ";
 	display: block;
 	height: 48px;
-	background-image: url(images/ropecon/ropecon_icon_black.svg);
+	background-image: url(../images/ropecon/ropecon_icon_black.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: 50% 0;
