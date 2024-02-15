@@ -124,7 +124,7 @@
 	padding: 0 30px;
 	margin-right: -15px;
 
-	background: transparent url(images/menu/menu_w.svg) 50% 50% no-repeat;
+	background: transparent url(../images/menu/menu_w.svg) 50% 50% no-repeat;
 	background-size: 24px 24px;
 }
 	#header:not(.open) section {

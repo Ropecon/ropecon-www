@@ -110,7 +110,7 @@ add_action( 'wp_enqueue_scripts', function ( ) {
 
 add_action( 'enqueue_block_editor_assets', function ( ) {
 	wp_enqueue_style( get_template( ) . '-gutenberg', get_template_directory_uri( ) . '/css/gutenberg.css' );
-	wp_enqueue_style( get_template( ) . '-fonts', get_template_directory_uri( ) . '/css/fonts.css' );
+	wp_enqueue_style( get_template( ) . '-fonts', get_template_directory_uri( ) . '/fonts/fonts.css' );
 
 	wp_enqueue_script( get_template( ) . '-gutenberg', get_template_directory_uri( ) . '/js/gutenberg.js', array( 'wp-blocks', 'wp-dom', 'wp-i18n' ), time( ), true );
 	wp_set_script_translations( get_template( ) . '-gutenberg', 'ropecon', get_template_directory( ) . '/languages/' );

@@ -645,7 +645,7 @@ p[class^="icon-"], p[class*=" icon-"] {
  *
  */
 
-div.kompassi-filter-note::before {
+#kompassi_schedule_notes div::before {
  	font-family: 'icomoon';
  	content: "\e9e6";
 	color: rgba(105,105,54,1);
@@ -667,4 +667,21 @@ div.kompassi-filter-note::before {
 	font-family: var(--ropecon-font-heading);
 	font-weight: 500;
 	font-size: 90%;
+}
+
+@media screen and (min-width:800px) {
+	#kompassi_schedule_filters.visible {
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-gap: 0.5em;
+	}
+	#kompassi_schedule_filters > * {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin: 0 !important;
+	}
+	#kompassi_schedule_filters > a {
+		padding: 0.3em 0;
+		text-align: right;
+	}
 }
