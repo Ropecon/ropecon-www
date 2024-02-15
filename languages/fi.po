@@ -5,8 +5,8 @@ msgstr ""
 "Project-Id-Version: Ropecon website\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/wp.ropecon.fi-"
 "theme\n"
-"POT-Creation-Date: 2024-02-06T23:52:07+02:00\n"
-"PO-Revision-Date: 2024-02-06 23:53+0200\n"
+"POT-Creation-Date: 2024-02-15T16:07:23+02:00\n"
+"PO-Revision-Date: 2024-02-15 16:08+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -33,157 +33,172 @@ msgstr "Pasi Lallinaho"
 msgid "https://digitoucan.fi/"
 msgstr "https://digitoucan.fi/"
 
-#: content.php:5
-msgid "Read the rest of this article &raquo;"
-msgstr "Lue loput tästä artikkelista &raquo;"
+#: block-patterns/block-patterns.php:15
+msgid "Title cover"
+msgstr "Otsikkokansi"
 
-#: functions.php:31
+#: block-patterns/block-patterns.php:16
+msgid "Centered title on top of image."
+msgstr "Keskitetty otsikko kuvan päällä."
+
+#: block-patterns/block-patterns.php:19
+msgid "Three icon columns"
+msgstr "Kolme kuvakesaraketta"
+
+#: block-patterns/block-patterns.php:20
+msgid "Three columns with icons and varying background colors."
+msgstr "Kolme saraketta kuvakkeilla ja erivärisillä taustoilla."
+
+#: functions.php:29
 msgid "Footer Widgets"
 msgstr "Alaviitteen vimpaimet"
 
-#: functions.php:41
+#: functions.php:39
 msgid "Main navigation"
 msgstr "Päänavigaatio"
 
-#: functions.php:42
+#: functions.php:40
 msgid "Guide navigation"
 msgstr "Oppaan navigaatio"
 
-#: functions.php:48
+#: functions.php:46
 msgid "Black"
 msgstr "Musta"
 
-#: functions.php:53
-msgid "Dark Gray"
-msgstr "Tummanharmaa"
+#: functions.php:51
+msgid "Ropecon Gray"
+msgstr "Ropecon harmaa"
 
-#: functions.php:58
-msgid "Light Gray"
-msgstr "Vaaleanharmaa"
-
-#: functions.php:63
+#: functions.php:56
 msgid "White"
 msgstr "Valkoinen"
 
-#: functions.php:68
+#: functions.php:61
+msgid "Ropecon Color #1"
+msgstr "Ropecon väri #1"
+
+#: functions.php:66
+msgid "Ropecon Color #2"
+msgstr "Ropecon väri #2"
+
+#: functions.php:71
 msgid "Ropecon Highlight #1"
 msgstr "Ropecon korostusväri #1"
 
-#: functions.php:81
+#: functions.php:76
+msgid "Ropecon Highlight #2"
+msgstr "Ropecon korostusväri #2"
+
+#: includes/admin-dashboard.php:9
 msgid "Ropecon theme"
 msgstr "Ropecon-teema"
 
-#: functions.php:85
+#: includes/admin-dashboard.php:13
 msgid "Quick Guide"
 msgstr "Pikaopas"
 
-#: functions.php:86
+#: includes/admin-dashboard.php:14
 msgid "Open Issues"
 msgstr "Avoimet ongelmat"
 
-#: functions.php:87
+#: includes/admin-dashboard.php:15
 msgid "File New Issue"
 msgstr "Ilmoita ongelmasta"
 
 #. translators: Slack channel name
-#: functions.php:90
+#: includes/admin-dashboard.php:18
 msgid "Still need help or have other questions?"
 msgstr "Tarvitsetko vielä apua tai onko sinulla muuta kysyttävää?"
 
 #. translators: Slack channel name
-#: functions.php:90
+#: includes/admin-dashboard.php:18
 msgid "Find us on the Ropecon Slack on %s"
 msgstr "Löydät meidät Ropeconin Slackista kanavalta %s"
 
-#: functions.php:99 functions.php:106
+#: includes/admin-settings.php:9 includes/admin-settings.php:16
 msgid "Settings for Ropecon"
 msgstr "Asetukset Ropeconille"
 
-#: functions.php:110
+#: includes/admin-settings.php:20
 msgid "Save Changes"
 msgstr "Tallenna muutokset"
 
-#: functions.php:119
+#: includes/admin-settings.php:29
 msgctxt "settings section title"
 msgid "General"
 msgstr "Yleinen"
 
-#: functions.php:127 functions.php:135 functions.php:191
+#: includes/admin-settings.php:37 includes/admin-settings.php:45
+#: includes/admin-settings.php:101
 msgid "404 Error Page"
 msgstr "404 -virhesivu"
 
-#: functions.php:147 functions.php:155
+#: includes/admin-settings.php:57 includes/admin-settings.php:65
 msgid "Footer Copyright Content"
 msgstr "Alaviitteen tekijänoikeussisältö"
 
-#: functions.php:178
+#: includes/admin-settings.php:88
 msgid "-- Use built-in --"
 msgstr "-- Käytä sisäänrakennettua --"
 
-#: functions.php:421
-msgid "Title cover"
-msgstr "Otsikkokansi"
-
-#: functions.php:422
-msgid "Centered title on top of image."
-msgstr "Keskitetty otsikko kuvan päällä."
-
-#: functions.php:425
-msgid "Three icon columns"
-msgstr "Kolme kuvakesaraketta"
-
-#: functions.php:426
-msgid "Three columns with icons and varying background colors."
-msgstr "Kolme saraketta kuvakkeilla ja erivärisillä taustoilla."
-
-#: functions.php:493
+#: includes/feat/image-information.php:52
 msgid "Description"
 msgstr "Kuvaus"
 
-#: index.php:22
+#: parts/content/single.php:5
+msgid "Read the rest of this article &raquo;"
+msgstr "Lue loput tästä artikkelista &raquo;"
+
+#: parts/layout/main.php:20
 msgid "Content not found"
 msgstr "Sisältöä ei löytynyt"
 
-#: index.php:23
+#: parts/layout/main.php:21
 msgid "The content you were looking for was not found."
 msgstr "Etsimääsi sisältöä ei löytynyt."
 
-#: script-gutenberg-block-icon.js:39 script-gutenberg-block-icon.js:57
+#: blocks/blocks.js:39 blocks/blocks.js:57
 msgid "Icon"
 msgstr "Kuvake"
 
-#: script-gutenberg-block-icon.js:59
+#: blocks/blocks.js:59
 msgid "Icon Name"
 msgstr "Kuvakkeen nimi"
 
-#: script-gutenberg.js:31 script-gutenberg.js:47 script-gutenberg.js:63
-#: script-gutenberg.js:79 script-gutenberg.js:95
+#: js/gutenberg.js:31 js/gutenberg.js:47 js/gutenberg.js:63 js/gutenberg.js:79
+#: js/gutenberg.js:95
 msgid "Default"
 msgstr "Oletus"
 
-#: script-gutenberg.js:36
+#: js/gutenberg.js:36
 msgid "Content in boxes"
 msgstr "Sisältö laatikoissa"
 
-#: script-gutenberg.js:52
+#: js/gutenberg.js:52
 msgid "Full height"
 msgstr "Täyskorkeus"
 
-#: script-gutenberg.js:68
+#: js/gutenberg.js:68
 msgid "Shadow"
 msgstr "Varjo"
 
-#: script-gutenberg.js:84
+#: js/gutenberg.js:84
 msgid "Text overlaying image"
 msgstr "Teksti kuvan päällä"
 
-#: script-gutenberg.js:100
+#: js/gutenberg.js:100
 msgid "Currency"
 msgstr "Valuutta"
 
-#: script-menu.js:5
+#: js/header.js:5
 msgid "Toggle menu"
 msgstr "Valikko päälle/pois"
+
+#~ msgid "Dark Gray"
+#~ msgstr "Tummanharmaa"
+
+#~ msgid "Light Gray"
+#~ msgstr "Vaaleanharmaa"
 
 #~ msgid "User Interface"
 #~ msgstr "Käyttöliittymä"

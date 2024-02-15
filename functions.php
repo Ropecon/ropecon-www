@@ -48,14 +48,9 @@ add_action( 'after_setup_theme', function ( ) {
 			'color' => '#000000'
 		),
 		array(
-			'name' => __( 'Dark Gray', 'ropecon' ),
-			'slug' => 'dark-gray',
-			'color' => '#232323'
-		),
-		array(
-			'name' => __( 'Light Gray', 'ropecon' ),
-			'slug' => 'light-gray',
-			'color' => '#f4f4f4'
+			'name' => __( 'Ropecon Gray', 'ropecon' ),
+			'slug' => 'ropecon-color-gray',
+			'color' => '#343434'
 		),
 		array(
 			'name' => __( 'White', 'ropecon' ),
@@ -63,9 +58,24 @@ add_action( 'after_setup_theme', function ( ) {
 			'color' => '#ffffff'
 		),
 		array(
+			'name' => __( 'Ropecon Color #1', 'ropecon' ),
+			'slug' => 'ropecon-color-one',
+			'color' => '#512e85'
+		),
+		array(
+			'name' => __( 'Ropecon Color #2', 'ropecon' ),
+			'slug' => 'ropecon-color-two',
+			'color' => '#00613c'
+		),
+		array(
 			'name' => __( 'Ropecon Highlight #1', 'ropecon' ),
-			'slug' => 'ropecon-highlight-one',
-			'color' => '#5472d2'
+			'slug' => 'ropecon-color-highlight-one',
+			'color' => '#ea8004'
+		),
+		array(
+			'name' => __( 'Ropecon Highlight #2', 'ropecon' ),
+			'slug' => 'ropecon-color-highlight-two',
+			'color' => '#f9e81b'
 		),
 	) );
 } );

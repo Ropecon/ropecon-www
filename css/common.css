@@ -511,8 +511,16 @@ table {
 
 /*  Highlight colors  */
 
-.has-ropecon-highlight-one-background-color { background-color: var(--ropecon-highlight-one); }
-.has-ropecon-highlight-one-color { color: var(--ropecon-highlight-one); }
+.has-ropecon-color-gray-background-color { background-color: var(--ropecon-color-gray); }
+.has-ropecon-color-gray-color { color: var(--ropecon-color-gray); }
+.has-ropecon-color-one-background-color { background-color: var(--ropecon-color-one); }
+.has-ropecon-color-one-color { color: var(--ropecon-color-one); }
+.has-ropecon-color-two-background-color { background-color: var(--ropecon-color-two); }
+.has-ropecon-color-two-color { color: var(--ropecon-color-two); }
+.has-ropecon-color-highlight-one-background-color { background-color: var(--ropecon-color-highlight-one); }
+.has-ropecon-color-highlight-one-color { color: var(--ropecon-color-highlight-one); }
+.has-ropecon-color-highlight-two-background-color { background-color: var(--ropecon-color-highlight-two); }
+.has-ropecon-color-highlight-two-color { color: var(--ropecon-color-highlight-two); }
 
 /*
  *  Animations
@@ -521,7 +529,7 @@ table {
 
 .ropecon-block-pattern.wp-block-cover[data-ll-status="loading"],
 .ropecon-block-pattern .wp-block-cover[data-ll-status="loading"] {
-	background-color: var(--ropecon-highlight-one);
+	background-color: var(--ropecon-color-one);
 	animation: 600ms linear 0s infinite alternate running loading-cover-image;
 }
 
@@ -656,7 +664,7 @@ p[class^="icon-"], p[class*=" icon-"] {
 
 :root {
 	--kompassi-program-icon-default: url(https://wp.ropecon.fi/wp-content/themes/ropecon/images/ropecon/ropecon_icon_white.svg);
-	--kompassi-button-bg-active: var(--ropecon-highlight-one);
+	--kompassi-button-bg-active: var(--ropecon-color-one);
 }
 
 .dimension { --dimension-bg-color: var(--kompassi-color-blue-mid); }
