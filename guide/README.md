@@ -14,9 +14,9 @@ Teema on rakennettu sillä ajatuksella, että sisällön ylläpitäminen yhdenmu
 
 Antamalla kannelle CSS-luokan `is-style-full-height`, kannesta tulee koko ruudun/ikkunan korkuinen.
 
-### Media ja kuva
+### Media ja teksti
 
-*Oletustyyli* näyttää kuvan ja tekstin vierekkäin. Oletustyylin kanssa *Näytä media vasemmalla/oikealla* -valinnalla **ei ole vaikutusta ulkoasuun**. Sen sijaan kuva näytetään peräkkäisissä lohkoissa vuorotellen vasemmalla ja oikealla.
+*Oletustyyli* näyttää kuvan ja tekstin vierekkäin.
 
 *Teksti kuvan päällä* -lohkotyyli tekee kuvasta lohkon taustakuvan ja asettaa tekstin valittuun sarakkeeseen kuvan päälle. *Näytä media vasemmalla/oikealla* -valinta määrittää, kummalle puolelle kuvalle jätetään ylimääräistä tilaa.
 
