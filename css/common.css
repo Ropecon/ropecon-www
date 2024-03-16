@@ -474,6 +474,11 @@ table {
 		vertical-align: top;
 	}
 
+/*  Social links  */
+.wp-block-social-links .wp-block-social-link {
+	margin-right: 0.5em;
+}
+
 /*  Table  */
 
 .wp-block-table {
