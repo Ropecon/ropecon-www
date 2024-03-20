@@ -21,6 +21,7 @@
 #header:not(.open) nav ul.menu > li > .sub-menu {
 	display: none;
 	position: absolute;
+	z-index: 10;
 	min-width: 16em;
 	background-color: #232323;
 }
