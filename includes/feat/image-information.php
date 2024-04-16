@@ -9,6 +9,9 @@ add_filter( 'render_block', 'ropecon_render_block_image_information', 10, 2 );
 
 function ropecon_render_block_image_information( $content, $block ) {
 	if( $block['blockName'] == 'core/media-text' ) {
+		if( !isset( $block['attrs']['mediaId'] ) ) {
+			return $content;
+		}
 		$media_id = $block['attrs']['mediaId'];
 	}
 
