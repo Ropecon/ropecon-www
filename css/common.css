@@ -248,7 +248,7 @@ table {
 }
 	.wp-block-columns .wp-block-column {
 		margin-left: 0;
-		padding: 3em;
+/*		padding: 3em; */
 	}
 
 	.wp-block-columns .wp-block-column .wp-block-group {
@@ -685,7 +685,7 @@ p[class^="icon-"], p[class*=" icon-"] {
 }
 
 :root {
-	--kompassi-program-icon-default: url(https://wp.ropecon.fi/wp-content/themes/ropecon/images/ropecon/ropecon_icon_white.svg);
+	--kompassi-program-icon-default: url(https://ropecon.fi/wp-content/themes/ropecon/images/ropecon/ropecon_icon_white.svg);
 	--kompassi-button-bg-active: var(--ropecon-color-one);
 }
 
@@ -711,3 +711,48 @@ p[class^="icon-"], p[class*=" icon-"] {
 	--floor-plan-hover-bg: var(--ropecon-color-two);
 	--floor-plan-hover-fg: #fff;
 }
+
+/*
+ *  Manually usable CSS classes
+ *
+ */
+
+.wp-block-group.ropecon-notice {
+	padding: 1em;
+	font-family: var(--ropecon-font-heading);
+}
+	.wp-block-group.ropecon-notice p {
+		margin-bottom: 0;
+	}
+
+/*
+ *  2024 colors for program guide
+ *
+ */
+
+#kompassi_schedule article[data-type*="performance"] { --kompassi-program-color: rgba(171,47,169,1); }
+#kompassi_schedule article[data-type*="experience"] { --kompassi-program-color: rgba(11,125,9,1); }
+#kompassi_schedule article[data-type*="meetup"] { --kompassi-program-color: rgba(64,224,208,1); }
+#kompassi_schedule article[data-type*="gaming"] { --kompassi-program-color: rgba(235,152,0,1); }
+#kompassi_schedule article[data-type*="talk"] { --kompassi-program-color: rgba(62,40,171,1); }
+#kompassi_schedule article[data-type*="activity"] { --kompassi-program-color: rgba(255,0,70,1); }
+#kompassi_schedule article[data-type*="workshop"] { --kompassi-program-color: rgba(68,185,228,1); }
+#kompassi_schedule article[data-type*="exhibit"] { --kompassi-program-color: rgba(128,0,64,1); }
+/*
+#kompassi_schedule article[data-type*="goh"] { --kompassi-program-color: rgba(171,47,169,1); }
+*/
+
+/*
+ *  2024 icons for program guide
+ *
+ */
+
+#kompassi_schedule article[data-topic*="penandpaper"] { --kompassi-program-icon-: ''; }
+#kompassi_schedule article[data-topic*="boffering"] { --kompassi-program-icon: url(https://ropecon.fi/wp-content/themes/ropecon/images/guide/boffering.svg); }
+#kompassi_schedule article[data-topic*="miniatures"] { --kompassi-program-icon: url(https://ropecon.fi/wp-content/themes/ropecon/images/guide/miniatures.svg); }
+#kompassi_schedule article[data-topic*="boardgames"] { --kompassi-program-icon: url(https://ropecon.fi/wp-content/themes/ropecon/images/guide/boardgames.svg); }
+#kompassi_schedule article[data-topic*="cardgames"] { --kompassi-program-icon: url(https://ropecon.fi/wp-content/themes/ropecon/images/guide/cardgames.svg);; }
+#kompassi_schedule article[data-topic*="crafts"] { --kompassi-program-icon-: ''; }
+#kompassi_schedule article[data-topic*="dance"] { --kompassi-program-icon-: ''; }
+#kompassi_schedule article[data-topic*="larp"] { --kompassi-program-icon-: ''; }
+#kompassi_schedule article[data-topic*="music"] { --kompassi-program-icon-: ''; }
