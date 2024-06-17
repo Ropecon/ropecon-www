@@ -262,10 +262,10 @@ table {
 }
 
 @media screen and (min-width:1024px) {
-	.wp-block-columns.alignfull .wp-block-column:first-child {
+	#content > .wp-block-columns.alignfull .wp-block-column:first-child {
 		padding-left: max( 3em, calc( ( ( 100vw - 1200px ) / 2 ) + 30px ) );
 	}
-	.wp-block-columns.alignfull .wp-block-column:last-child {
+	#content > .wp-block-columns.alignfull .wp-block-column:last-child {
 		padding-right: max( 3em, calc( ( ( 100vw - 1200px ) / 2 ) + 30px ) );
 	}
 }
@@ -751,8 +751,29 @@ p[class^="icon-"], p[class*=" icon-"] {
 #kompassi_schedule article[data-topic*="boffering"] { --kompassi-program-icon: url(https://ropecon.fi/wp-content/themes/ropecon/images/guide/boffering.svg); }
 #kompassi_schedule article[data-topic*="miniatures"] { --kompassi-program-icon: url(https://ropecon.fi/wp-content/themes/ropecon/images/guide/miniatures.svg); }
 #kompassi_schedule article[data-topic*="boardgames"] { --kompassi-program-icon: url(https://ropecon.fi/wp-content/themes/ropecon/images/guide/boardgames.svg); }
-#kompassi_schedule article[data-topic*="cardgames"] { --kompassi-program-icon: url(https://ropecon.fi/wp-content/themes/ropecon/images/guide/cardgames.svg);; }
+#kompassi_schedule article[data-topic*="cardgames"] { --kompassi-program-icon: url(https://ropecon.fi/wp-content/themes/ropecon/images/guide/cardgames.svg); }
 #kompassi_schedule article[data-topic*="crafts"] { --kompassi-program-icon-: ''; }
 #kompassi_schedule article[data-topic*="dance"] { --kompassi-program-icon-: ''; }
 #kompassi_schedule article[data-topic*="larp"] { --kompassi-program-icon-: ''; }
-#kompassi_schedule article[data-topic*="music"] { --kompassi-program-icon-: ''; }
+#kompassi_schedule article[data-topic*="music"] { --kompassi-program-icon: url(https://ropecon.fi/wp-content/themes/ropecon/images/guide/music.svg); }
+
+/*
+ *  2024 dimensions
+ *
+ */
+
+#kompassi_block_schedule select.filter-dimension + div :not(.selected):is([data-search-term="avoin pelaaminen"],[data-search-term="demo"],[data-search-term="turnaus"]),
+#kompassi_block_schedule select.filter-dimension + div :not(.selected):is([data-search-term="esitelmä"],[data-search-term="keskustelu"],[data-search-term="paneeli"]) {
+	padding-left: 1.5em;
+}
+
+/*
+ *  Temp: Hide "Next" button
+ *
+ */
+
+#kompassi_block_schedule .date-toggle[data-date="next"] { display: none; }
+#kompassi_block_schedule .date-toggle[data-date="next"] + * {
+	border-top-left-radius: var(--kompassi-button-radius);
+	border-bottom-left-radius: var(--kompassi-button-radius);
+}
