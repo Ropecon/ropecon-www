@@ -233,7 +233,7 @@ table {
 .wp-block-buttons {
 	margin-bottom: 1em;
 }
-	.wp-block-buttons > .wp-block-button:not(:last-child) {
+	.wp-block-buttons.is-vertical > .wp-block-button:not(:last-child) {
 		margin-bottom: 0.5em;
 	}
 	.wp-block-buttons .wp-block-button__link {
