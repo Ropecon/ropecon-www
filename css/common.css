@@ -760,6 +760,10 @@ p[class^="icon-"], p[class*=" icon-"] {
 	padding-left: 1.5em;
 }
 
+#kompassi_schedule_filters [data-filter="type"] + .ms-options-wrap .ms-options > ul li.selected {
+	order: 0;
+}
+
 /*
  *  Temp: Hide "Next" button
  *
