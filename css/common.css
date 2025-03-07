@@ -240,6 +240,14 @@ table {
 		line-height: 1.4em;
 	}
 
+	/*  Button  */
+	@media screen and (max-width:800px) {
+		.wp-block-button__link {
+			padding: calc(.5em + 2px) calc(1em + 2px);
+			font-size: 1em;
+		}
+	}
+
 /*  Columns  */
 
 .wp-block-columns {
