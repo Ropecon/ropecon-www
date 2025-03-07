@@ -11,10 +11,11 @@
  */
 
 :root {
-	--ropecon-color-one: #512e85;
-	--ropecon-color-two: #00613c;
-	--ropecon-color-highlight-one: #ea8004;
-	--ropecon-color-highlight-two: #f9e81b;
+	--ropecon-color-one: #dc6994;
+	--ropecon-color-two: #4ca680;
+	--ropecon-color-three: #486c94;
+	--ropecon-color-highlight-one: #e87d26;
+	--ropecon-color-highlight-two: #92c9f5;
 	--ropecon-color-gray: #343434;
 
 	--ropecon-background: #f5f5f5;

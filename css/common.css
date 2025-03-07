@@ -539,6 +539,8 @@ table {
 .has-ropecon-color-one-color { color: var(--ropecon-color-one); }
 .has-ropecon-color-two-background-color { background-color: var(--ropecon-color-two); }
 .has-ropecon-color-two-color { color: var(--ropecon-color-two); }
+.has-ropecon-color-three-background-color { background-color: var(--ropecon-color-three); }
+.has-ropecon-color-three-color { color: var(--ropecon-color-three); }
 .has-ropecon-color-highlight-one-background-color { background-color: var(--ropecon-color-highlight-one); }
 .has-ropecon-color-highlight-one-color { color: var(--ropecon-color-highlight-one); }
 .has-ropecon-color-highlight-two-background-color { background-color: var(--ropecon-color-highlight-two); }

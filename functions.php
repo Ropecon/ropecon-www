@@ -60,22 +60,27 @@ add_action( 'after_setup_theme', function ( ) {
 		array(
 			'name' => __( 'Ropecon Color #1', 'ropecon' ),
 			'slug' => 'ropecon-color-one',
-			'color' => '#512e85'
+			'color' => '#dc6994' // 2025: vaaleanpunainen
 		),
 		array(
 			'name' => __( 'Ropecon Color #2', 'ropecon' ),
 			'slug' => 'ropecon-color-two',
-			'color' => '#00613c'
+			'color' => '#4ca680' // 2025: vihreä
+		),
+		array(
+			'name' => __( 'Ropecon Color #3', 'ropecon' ),
+			'slug' => 'ropecon-color-three',
+			'color' => '#486c94' // 2025: tummansininen
 		),
 		array(
 			'name' => __( 'Ropecon Highlight #1', 'ropecon' ),
 			'slug' => 'ropecon-color-highlight-one',
-			'color' => '#ea8004'
+			'color' => '#e87d26' // 2025: oranssi
 		),
 		array(
 			'name' => __( 'Ropecon Highlight #2', 'ropecon' ),
 			'slug' => 'ropecon-color-highlight-two',
-			'color' => '#f9e81b'
+			'color' => '#92c9f5' // 2025: vaaleansininen
 		),
 	) );
 } );
