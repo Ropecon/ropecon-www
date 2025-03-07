@@ -323,11 +323,26 @@ table {
 /*  Details  */
 
 .wp-block-details {
-	padding: 30px;
+	padding: 1em;
 }
+	.wp-block-details summary {
+		font-family: var(--ropecon-font-heading);
+		font-size: 90%;
+		font-weight: 500;
+		list-style-type: "\e660  ";
+	}
+	.wp-block-details summary::marker {
+		font-family: 'icomoon';
+		font-size: 100%;
+	}
 	.wp-block-details:open summary {
 		margin-bottom: 1em;
+		list-style-type: "\e641  ";
 	}
+
+.wp-block-details:has(+ .wp-block-details) {
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
 
 /*  Group  */
 
