@@ -320,6 +320,15 @@ table {
 		margin: 3em 0;
 	}
 
+/*  Details  */
+
+.wp-block-details {
+	padding: 30px;
+}
+	.wp-block-details:open summary {
+		margin-bottom: 1em;
+	}
+
 /*  Group  */
 
 .wp-block-group {

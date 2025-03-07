@@ -92,6 +92,7 @@ add_action( 'after_setup_theme', function ( ) {
 
 add_action( 'wp_enqueue_scripts', function ( ) {
 	$ver = '20230726.0';
+	$ver = time( );
 
 	// Eric Meyer: CSS reset | http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
 	wp_enqueue_style( 'css-reset', get_template_directory_uri( ) . '/css/reset.css' );
