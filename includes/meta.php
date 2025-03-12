@@ -33,11 +33,22 @@ add_action( 'wp_head', function ( ) {
 		if( get_the_post_thumbnail( $post_id ) != '' ) {
 			$meta_image = get_the_post_thumbnail_url( $post_id, array( 1200, 630 ) );
 	 	} else {
+			if( function_exists( 'pll_current_language' ) ) {
+				$lang = pll_current_language( );
+			} else {
+				$lang = substr( get_locale( ), 0, 2 );
+			}
+
+			$meta_image = get_stylesheet_directory_uri( ) . '/images/meta-default-' . $lang . '.png';
+
+			/* First image is the featured image */
+			/*
 		 	$content = preg_match_all('/<img.+?src=[\'"]([^\'"]+)[\'"].*?>/i', $post_content, $matches );
 		 	if( !empty( $matches[1][0] ) ) {
 				// first image is the image
 				$meta_image = $matches[1][0];
 			}
+			*/
 		}
 	}
 
