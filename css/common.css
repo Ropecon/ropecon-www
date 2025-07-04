@@ -360,6 +360,13 @@ table {
 	.wp-block-group__inner-container > :first-child { margin-top: 0; }
 	.wp-block-group__inner-container > :last-child { margin-bottom: 0; }
 
+@media screen and (max-width:640px) {
+	.wp-block-group.is-layout-grid,
+	.wp-block-group.is-layout-grid > .wp-block-group {
+		padding-inline: 0;
+	}
+}
+
 /*  Latest Posts  */
 
 .wp-block-latest-posts {
