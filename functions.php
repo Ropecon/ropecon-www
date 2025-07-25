@@ -91,7 +91,7 @@ add_action( 'after_setup_theme', function ( ) {
  */
 
 add_action( 'wp_enqueue_scripts', function ( ) {
-	$ver = '20230726.0';
+	$ver = '20250725.1';
 	$ver = time( );
 
 	// Eric Meyer: CSS reset | http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
