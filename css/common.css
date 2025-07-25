@@ -96,7 +96,7 @@ footer section h2 {
  *
  */
 
-p {
+:not(#kompassi_block_schedule) p {
 	line-height: 1.625em;
 }
 
@@ -758,3 +758,7 @@ p[class^="icon-"], p[class*=" icon-"] {
 	.wp-block-group.ropecon-notice p {
 		margin-bottom: 0;
 	}
+
+.wp-block-group.has-small-padding {
+	padding: 15px;
+}
