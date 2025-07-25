@@ -115,12 +115,12 @@ img {
  *
  */
 
-#content > :not(#kompassi_block_schedule) :is(ol,ul) li:not([data-search-term]) {
+#content > :not(#kompassi_block_schedule,.map-select) :is(ol,ul) li:not([data-search-term]) {
 	position: relative;
 	margin-left: 1.7em;
 	margin-bottom: 0.4em;
 }
-	#content > :not(#kompassi_block_schedule) ul > li:not([data-search-term])::before {
+	#content > :not(#kompassi_block_schedule,.map-select) ul > li:not([data-search-term])::before {
 		content: " ";
 		display: block;
 		position: absolute;
