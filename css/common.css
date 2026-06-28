@@ -740,9 +740,9 @@ p[class^="icon-"], p[class*=" icon-"] {
  */
 
 :root {
-	--floor-plan-selected-bg: var(--ropecon-color-one);
+	--floor-plan-selected-bg: var(--ropecon-color-two);
 	--floor-plan-selected-fg: #fff;
-	--floor-plan-hover-bg: var(--ropecon-color-two);
+	--floor-plan-hover-bg: var(--ropecon-color-highlight-one);
 	--floor-plan-hover-fg: #fff;
 }
 

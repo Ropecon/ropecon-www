@@ -4,15 +4,15 @@
  *  Description:
  *  Author: Pasi Lallinaho
  *  Author URI: https://digitoucan.fi/
- *  Version: 2024-02
+ *  Version: 2026-03-12
  *
  *  Text domain: ropecon
  *
  */
 
 :root {
-	--ropecon-color-one: #dc6994;
-	--ropecon-color-two: #4ca680;
+	--ropecon-color-one: #d5c0d9;
+	--ropecon-color-two: #59698a;
 	--ropecon-color-three: #486c94;
 	--ropecon-color-highlight-one: #e87d26;
 	--ropecon-color-highlight-two: #92c9f5;

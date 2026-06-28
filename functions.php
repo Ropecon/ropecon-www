@@ -60,12 +60,12 @@ add_action( 'after_setup_theme', function ( ) {
 		array(
 			'name' => __( 'Ropecon Color #1', 'ropecon' ),
 			'slug' => 'ropecon-color-one',
-			'color' => '#dc6994' // 2025: vaaleanpunainen
+			'color' => '#d5c0d9' // 2026: vaaleanvioletti
 		),
 		array(
 			'name' => __( 'Ropecon Color #2', 'ropecon' ),
 			'slug' => 'ropecon-color-two',
-			'color' => '#4ca680' // 2025: vihreä
+			'color' => '#59698a' // 2026: murrettu sininen
 		),
 		array(
 			'name' => __( 'Ropecon Color #3', 'ropecon' ),
